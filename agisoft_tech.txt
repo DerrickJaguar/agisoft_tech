@@ -1,0 +1,269 @@
+Suggested details for the Agisoft Technologies website.
+Suggested Brand Colors
+•	Primary Green: #0C7A3F 
+•	Dark Green: #066432 
+•	White: #FFFFFF 
+•	Charcoal Black: #111111 
+•	Light Gray Background: #F7F9F8 
+These colors will give the company a premium enterprise appearance similar to Microsoft, NVIDIA, and Cisco.
+Website Objective
+Design a world-class, premium, enterprise-level software development company website for Agisoft Technologies. The website should position the company as a trusted technology partner providing innovative software solutions for businesses, governments, NGOs, startups, educational institutions, and enterprises across Africa and globally.
+The overall design should feel comparable to Microsoft, IBM, AWS, Stripe, Vercel, and Google Cloud—minimalistic, elegant, highly interactive, and professional.
+
+Branding
+Use the attached Agisoft Technologies logo throughout the website.
+Brand colors should be extracted from the logo:
+•	Emerald Green (#0C7A3F) 
+•	Dark Green (#066432) 
+•	White 
+•	Black 
+•	Soft Gray backgrounds 
+Typography:
+•	Headings: Poppins Bold 
+•	Body: Inter 
+•	Buttons: Semi Bold 
+
+
+
+
+Homepage
+Hero Section
+Create an impressive full-width hero.
+Headline:
+Innovative Software Solutions for a Digital Future
+Sub headline:
+Agisoft Technologies helps businesses transform ideas into powerful digital products through custom software development, mobile applications, cloud technologies, artificial intelligence, cybersecurity, and IT consulting. 
+CTA Buttons
+•	Get Started 
+•	Book Free Consultation 
+Background:
+Animated network connections
+Floating UI cards
+Code snippets
+3D abstract technology graphics
+Animated gradient lighting
+Statistics:
+✔ 100+ Projects Completed
+✔ 50+ Happy Clients
+✔ 99% Client Satisfaction
+✔ 24/7 Technical Support
+________________________________________
+About Agisoft Technologies
+Include:
+Company Story
+Mission
+Vision
+Core Values
+Why businesses trust Agisoft
+Timeline showing company growth.
+
+Our Services
+Modern glass morphism cards.
+Services include:
+Custom Software Development
+Website Development
+Mobile App Development
+Enterprise Systems (ERP & CRM)
+Artificial Intelligence Solutions
+Machine Learning Applications
+Cloud Computing
+Cybersecurity
+UI/UX Design
+Business Process Automation
+API Development
+System Integration
+IT Consultancy
+Software Maintenance
+Database Development
+Hosting & Cloud Infrastructure
+Each service should have:
+Modern icon
+Brief description
+Benefits
+Learn More button
+________________________________________
+Featured Solutions
+Showcase ready-made solutions such as:
+School Management System
+HR Management System
+Payroll System
+Accounting Software
+Inventory Management System
+POS System
+Hotel Management System
+SACCO Management System
+
+Each solution should include screenshots, features, and benefits.
+
+Industries We Serve
+Interactive cards for:
+Healthcare
+Education
+Government
+Financial Services
+NGOs
+Agriculture
+Manufacturing
+Retail
+Hospitality
+Construction
+Transport & Logistics
+Telecommunications
+
+Why Choose Agisoft?
+Interactive comparison section.
+Highlight:
+Experienced Developers
+Latest Technologies
+Scalable Solutions
+Fast Delivery
+Secure Development
+Transparent Pricing
+Excellent Customer Support
+Continuous Innovation
+Affordable Enterprise Solutions
+Reliable Maintenance
+
+Technologies
+Beautiful animated logos for:
+Frontend
+React
+Next.js
+Angular
+Vue
+Backend
+Node.js
+Laravel
+Python
+Java
+.NET
+PHP
+Mobile
+Flutter
+React Native
+Swift
+Kotlin
+Databases
+PostgreSQL
+MySQL
+MongoDB
+SQL Server
+Cloud
+AWS
+Microsoft Azure
+Google Cloud
+DevOps
+Docker
+GitHub
+GitLab
+Jenkins
+Kubernetes
+
+Portfolio
+Professional project gallery.
+Each project should include:
+Large screenshot
+Client industry
+Technologies used
+Challenge
+Solution
+Business impact
+
+Development Process
+Animated timeline.
+Discovery
+Planning
+Design
+Development
+Testing
+Deployment
+Support
+
+Testimonials
+Elegant slider with client photos.
+Include ratings.
+
+FAQ
+Accordion layout.
+Questions covering:
+Timeline
+Pricing
+Ownership
+Maintenance
+Security
+Hosting
+Support
+
+Blog
+Technology articles.
+AI
+Cybersecurity
+Cloud
+Software Engineering
+Digital Transformation
+Mobile Apps
+Innovation
+
+Careers
+Current openings
+Internships
+Graduate programs
+Benefits
+Apply Now button
+
+Contact
+Large contact section.
+Include:
+Contact Form
+Phone
+WhatsApp
+Email
+Google Maps
+Office Hours
+Social Media
+
+Footer
+Company Logo
+Quick Links
+Services
+Resources
+Newsletter
+Privacy Policy
+Terms & Conditions
+Copyright
+
+Extra Features
+Dark Mode
+Live Chat
+WhatsApp Floating Button
+Smooth Animations
+Parallax Scrolling
+Interactive Counters
+Video Backgrounds
+Particle Effects
+Loading Animation
+Back-to-Top Button
+Cookie Consent
+Newsletter Popup
+SEO Optimized
+Accessibility (WCAG)
+Fast Loading
+Progressive Web App (PWA) Ready
+
+User Experience
+The website should instantly communicate innovation, trust, and technical excellence. Every section should use smooth micro-animations, generous whitespace, subtle gradients, and premium interactions. The design should feel modern and sophisticated while remaining fast, responsive, and easy to navigate.
+
+Tone of Voice
+Professional, confident, innovative, and customer-focused. The copy should emphasize solving real business challenges through technology, using clear, persuasive language that appeals to startups, SMEs, enterprises, and public-sector organizations.
+
+Final Design Direction
+Create a premium, award-winning website with the visual quality of Stripe, Vercel, Microsoft, or AWS. The design should feature elegant green accents inspired by the Agisoft logo, clean layouts, immersive animations, and a polished user experience that immediately establishes Agisoft Technologies as a leading software development company.
+
+Location
+Kiwatule Road
+Nambi Mall, Level 2 RM H19
+Kampala
+
+info@agisofttechnologies.com
+www.agisofttechnologies.com
+256 785 102 01
