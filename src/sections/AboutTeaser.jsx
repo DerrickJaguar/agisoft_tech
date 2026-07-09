@@ -39,7 +39,7 @@ export default function AboutTeaser() {
           <h2 className="mt-3 font-heading text-3xl font-bold text-charcoal sm:text-4xl">
             Engineering trust, one solution at a time
           </h2>
-          <p className="mt-5 text-lg leading-relaxed text-charcoal/60">
+          <p className="mt-5 text-lg leading-relaxed text-charcoal/60 dark:text-white/60">
             Founded to help organizations navigate digital transformation, Agisoft Technologies
             has grown into a trusted partner for businesses, governments, NGOs, and institutions
             across Africa. We combine deep technical expertise with a genuine understanding of
@@ -71,7 +71,7 @@ export default function AboutTeaser() {
                 <h3 className="font-heading text-lg font-semibold text-charcoal">
                   {pillar.title}
                 </h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-charcoal/60">
+                <p className="mt-1.5 text-sm leading-relaxed text-charcoal/60 dark:text-white/60">
                   {pillar.description}
                 </p>
               </div>

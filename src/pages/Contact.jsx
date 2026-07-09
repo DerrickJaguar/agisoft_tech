@@ -1,7 +1,14 @@
 import PageHero from '../components/PageHero'
 import Contact from '../sections/Contact'
+import useSEO from '../hooks/useSEO'
 
 export default function ContactPage() {
+  useSEO({
+    title: 'Contact Us',
+    description:
+      'Get in touch with Agisoft Technologies — phone, WhatsApp, email, or our contact form. We respond within one business day.',
+  })
+
   return (
     <>
       <PageHero

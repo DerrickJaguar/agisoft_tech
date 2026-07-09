@@ -8,7 +8,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(0)
 
   return (
-    <section id="faq" className="section-padding bg-surface">
+    <section id="faq" className="section-padding bg-surface dark:bg-white/5">
       <div className="mx-auto max-w-3xl">
         <SectionHeading
           eyebrow="FAQ"
@@ -22,7 +22,7 @@ export default function FAQ() {
             return (
               <div
                 key={faq.question}
-                className="overflow-hidden rounded-xl border border-charcoal/10 bg-white"
+                className="overflow-hidden rounded-xl border border-charcoal/10 dark:border-white/10 bg-white dark:bg-white/5"
               >
                 <button
                   type="button"
@@ -30,7 +30,7 @@ export default function FAQ() {
                   className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-heading text-base font-semibold text-charcoal">
+                  <span className="font-heading text-base font-semibold text-charcoal dark:text-white">
                     {faq.question}
                   </span>
                   <ChevronDown
@@ -49,7 +49,7 @@ export default function FAQ() {
                       transition={{ duration: 0.3, ease: 'easeInOut' }}
                       className="overflow-hidden"
                     >
-                      <p className="px-6 pb-5 text-sm leading-relaxed text-charcoal/60">
+                      <p className="px-6 pb-5 text-sm leading-relaxed text-charcoal/60 dark:text-white/60">
                         {faq.answer}
                       </p>
                     </motion.div>

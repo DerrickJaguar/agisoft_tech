@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-heading: 'Poppins', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -14,12 +16,20 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
     font-family: var(--font-body);
     color: var(--color-charcoal);
     background: #ffffff;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .dark body {
+    color: rgba(255, 255, 255, 0.9);
+    background: var(--color-charcoal);
   }
 
   h1,

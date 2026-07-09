@@ -13,7 +13,7 @@ export default function AboutStory() {
         <span className="font-heading text-sm font-semibold uppercase tracking-widest text-primary">
           Our Story
         </span>
-        <h2 className="mt-3 font-heading text-3xl font-bold text-charcoal sm:text-4xl">
+        <h2 className="mt-3 font-heading text-3xl font-bold text-charcoal dark:text-white sm:text-4xl">
           Built to solve real business problems
         </h2>
       </motion.div>
@@ -23,7 +23,7 @@ export default function AboutStory() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6, delay: 0.1 }}
-        className="mt-8 space-y-5 text-lg leading-relaxed text-charcoal/65"
+        className="mt-8 space-y-5 text-lg leading-relaxed text-charcoal/65 dark:text-white/65"
       >
         <p>
           Agisoft Technologies began with a simple observation: too many organizations across

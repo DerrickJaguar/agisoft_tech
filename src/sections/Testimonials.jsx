@@ -4,6 +4,14 @@ import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react'
 import SectionHeading from '../components/SectionHeading'
 import { testimonials } from '../data/siteData'
 
+function getInitials(name) {
+  return name
+    .split(' ')
+    .map((part) => part[0])
+    .join('')
+    .toUpperCase()
+}
+
 export default function Testimonials() {
   const [index, setIndex] = useState(0)
 
@@ -42,13 +50,20 @@ export default function Testimonials() {
                   <Star key={i} size={18} className="fill-primary text-primary" />
                 ))}
               </div>
-              <p className="mt-5 text-xl font-medium leading-relaxed text-charcoal">
+              <p className="mt-5 text-xl font-medium leading-relaxed text-charcoal dark:text-white">
                 “{current.quote}”
               </p>
-              <p className="mt-6 font-heading text-base font-semibold text-charcoal">
-                {current.name}
-              </p>
-              <p className="text-sm text-charcoal/50">{current.role}</p>
+              <div className="mt-6 flex items-center justify-center gap-3">
+                <div className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-primary/10 font-heading text-sm font-semibold text-primary">
+                  {getInitials(current.name)}
+                </div>
+                <div className="text-left">
+                  <p className="font-heading text-base font-semibold text-charcoal dark:text-white">
+                    {current.name}
+                  </p>
+                  <p className="text-sm text-charcoal/50 dark:text-white/50">{current.role}</p>
+                </div>
+              </div>
             </motion.div>
           </AnimatePresence>
         </div>
@@ -57,7 +72,7 @@ export default function Testimonials() {
           <button
             type="button"
             onClick={() => setIndex((i) => (i - 1 + testimonials.length) % testimonials.length)}
-            className="grid h-10 w-10 place-items-center rounded-full border border-charcoal/10 text-charcoal transition-colors hover:bg-primary hover:text-white"
+            className="grid h-10 w-10 place-items-center rounded-full border border-charcoal/10 dark:border-white/10 text-charcoal dark:text-white transition-colors hover:bg-primary hover:text-white"
             aria-label="Previous testimonial"
           >
             <ChevronLeft size={18} />
@@ -78,7 +93,7 @@ export default function Testimonials() {
           <button
             type="button"
             onClick={() => setIndex((i) => (i + 1) % testimonials.length)}
-            className="grid h-10 w-10 place-items-center rounded-full border border-charcoal/10 text-charcoal transition-colors hover:bg-primary hover:text-white"
+            className="grid h-10 w-10 place-items-center rounded-full border border-charcoal/10 dark:border-white/10 text-charcoal dark:text-white transition-colors hover:bg-primary hover:text-white"
             aria-label="Next testimonial"
           >
             <ChevronRight size={18} />

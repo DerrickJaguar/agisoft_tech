@@ -41,7 +41,7 @@ export default function CareerApplicationForm({ presetPosition, id = 'apply' }) 
   }
 
   return (
-    <section id={id} className="section-padding bg-surface">
+    <section id={id} className="section-padding bg-surface dark:bg-white/5">
       <div className="mx-auto max-w-3xl">
         <SectionHeading
           eyebrow="Apply Now"
@@ -54,15 +54,15 @@ export default function CareerApplicationForm({ presetPosition, id = 'apply' }) 
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
-          className="mt-10 rounded-2xl border border-charcoal/5 bg-white p-8"
+          className="mt-10 rounded-2xl border border-charcoal/5 dark:border-white/10 bg-white dark:bg-white/5 p-8"
         >
           {status === 'success' ? (
             <div className="flex flex-col items-center py-10 text-center">
               <CheckCircle2 size={48} className="text-primary" />
-              <h3 className="mt-4 font-heading text-xl font-semibold text-charcoal">
+              <h3 className="mt-4 font-heading text-xl font-semibold text-charcoal dark:text-white">
                 Application received!
               </h3>
-              <p className="mt-2 max-w-sm text-sm text-charcoal/60">
+              <p className="mt-2 max-w-sm text-sm text-charcoal/60 dark:text-white/60">
                 Thanks for applying. Our hiring team will review your application and get back to
                 you if there's a match.
               </p>
@@ -77,49 +77,53 @@ export default function CareerApplicationForm({ presetPosition, id = 'apply' }) 
           ) : (
             <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-5 sm:grid-cols-2">
               <div>
-                <label className="font-heading text-sm font-medium text-charcoal">
+                <label htmlFor="apply-name" className="font-heading text-sm font-medium text-charcoal dark:text-white">
                   Full Name
                 </label>
                 <input
                   required
+                  id="apply-name"
                   name="name"
                   type="text"
-                  className="mt-2 w-full rounded-lg border border-charcoal/10 bg-surface px-4 py-3 text-sm focus:border-primary focus:outline-none"
+                  className="mt-2 w-full rounded-lg border border-charcoal/10 dark:border-white/10 bg-surface dark:bg-white/5 px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30"
                   placeholder="Your Name"
                 />
               </div>
               <div>
-                <label className="font-heading text-sm font-medium text-charcoal">
+                <label htmlFor="apply-email" className="font-heading text-sm font-medium text-charcoal dark:text-white">
                   Email Address
                 </label>
                 <input
                   required
+                  id="apply-email"
                   name="email"
                   type="email"
-                  className="mt-2 w-full rounded-lg border border-charcoal/10 bg-surface px-4 py-3 text-sm focus:border-primary focus:outline-none"
+                  className="mt-2 w-full rounded-lg border border-charcoal/10 dark:border-white/10 bg-surface dark:bg-white/5 px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30"
                   placeholder="jane@example.com"
                 />
               </div>
               <div>
-                <label className="font-heading text-sm font-medium text-charcoal">
+                <label htmlFor="apply-phone" className="font-heading text-sm font-medium text-charcoal dark:text-white">
                   Phone Number
                 </label>
                 <input
+                  id="apply-phone"
                   name="phone"
                   type="tel"
-                  className="mt-2 w-full rounded-lg border border-charcoal/10 bg-surface px-4 py-3 text-sm focus:border-primary focus:outline-none"
+                  className="mt-2 w-full rounded-lg border border-charcoal/10 dark:border-white/10 bg-surface dark:bg-white/5 px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30"
                   placeholder="Your Phone Number"
                 />
               </div>
               <div>
-                <label className="font-heading text-sm font-medium text-charcoal">
+                <label htmlFor="apply-position" className="font-heading text-sm font-medium text-charcoal dark:text-white">
                   Position
                 </label>
                 <select
                   key={defaultPosition}
+                  id="apply-position"
                   name="position"
                   defaultValue={defaultPosition}
-                  className="mt-2 w-full rounded-lg border border-charcoal/10 bg-surface px-4 py-3 text-sm focus:border-primary focus:outline-none"
+                  className="mt-2 w-full rounded-lg border border-charcoal/10 dark:border-white/10 bg-surface dark:bg-white/5 px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30"
                 >
                   {positionOptions.map((opt) => (
                     <option key={opt} value={opt}>
@@ -129,20 +133,21 @@ export default function CareerApplicationForm({ presetPosition, id = 'apply' }) 
                 </select>
               </div>
               <div className="sm:col-span-2">
-                <label className="font-heading text-sm font-medium text-charcoal">
+                <label htmlFor="apply-message" className="font-heading text-sm font-medium text-charcoal dark:text-white">
                   Cover Letter / Message
                 </label>
                 <textarea
                   required
+                  id="apply-message"
                   name="message"
                   rows={5}
-                  className="mt-2 w-full rounded-lg border border-charcoal/10 bg-surface px-4 py-3 text-sm focus:border-primary focus:outline-none"
+                  className="mt-2 w-full rounded-lg border border-charcoal/10 dark:border-white/10 bg-surface dark:bg-white/5 px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30"
                   placeholder="Tell us why you'd be a great fit... Feel free to include a link to your CV or LinkedIn profile."
                 />
               </div>
 
               {status === 'error' && (
-                <div className="flex items-start gap-2 rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700 sm:col-span-2">
+                <div className="flex items-start gap-2 rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700 dark:bg-red-500/10 dark:text-red-400 sm:col-span-2">
                   <AlertCircle size={16} className="mt-0.5 shrink-0" />
                   Something went wrong sending your application. Please try again, or email us
                   directly at info@agisofttechnologies.com.

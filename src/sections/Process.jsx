@@ -26,7 +26,7 @@ export default function Process() {
                   i % 2 === 0 ? 'lg:pr-14' : 'lg:ml-auto lg:pl-14'
                 }`}
               >
-                <div className="absolute left-0 top-0 grid h-8 w-8 shrink-0 place-items-center rounded-full bg-primary font-heading text-sm font-bold text-white sm:static">
+                <div className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-primary font-heading text-sm font-bold text-white sm:absolute sm:left-0 sm:top-0">
                   {i + 1}
                 </div>
                 <div className="rounded-xl border border-white/10 bg-white/5 p-5">

@@ -1,34 +1,44 @@
+import { lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
+import PageLoader from './components/PageLoader'
 import Home from './pages/Home'
-import About from './pages/About'
-import Services from './pages/Services'
-import Solutions from './pages/Solutions'
-import Industries from './pages/Industries'
-import Portfolio from './pages/Portfolio'
-import Blog from './pages/Blog'
-import Careers from './pages/Careers'
-import Contact from './pages/Contact'
-import ComingSoon from './pages/ComingSoon'
+
+const About = lazy(() => import('./pages/About'))
+const Services = lazy(() => import('./pages/Services'))
+const Solutions = lazy(() => import('./pages/Solutions'))
+const Industries = lazy(() => import('./pages/Industries'))
+const Portfolio = lazy(() => import('./pages/Portfolio'))
+const Blog = lazy(() => import('./pages/Blog'))
+const Careers = lazy(() => import('./pages/Careers'))
+const Contact = lazy(() => import('./pages/Contact'))
+const Privacy = lazy(() => import('./pages/Privacy'))
+const Terms = lazy(() => import('./pages/Terms'))
+const ComingSoon = lazy(() => import('./pages/ComingSoon'))
 
 function App() {
   return (
-    <Routes>
-      <Route element={<Layout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/solutions" element={<Solutions />} />
-        <Route path="/industries" element={<Industries />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/careers" element={<Careers />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/privacy" element={<ComingSoon title="Privacy Policy" />} />
-        <Route path="/terms" element={<ComingSoon title="Terms & Conditions" />} />
-        <Route path="*" element={<ComingSoon title="Page Not Found" />} />
-      </Route>
-    </Routes>
+    <>
+      <PageLoader />
+      <Suspense fallback={null}>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/solutions" element={<Solutions />} />
+            <Route path="/industries" element={<Industries />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="*" element={<ComingSoon title="Page Not Found" />} />
+          </Route>
+        </Routes>
+      </Suspense>
+    </>
   )
 }
 

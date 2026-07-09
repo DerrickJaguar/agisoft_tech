@@ -21,16 +21,23 @@ export default function FeaturedSolutions() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5, delay: (i % 4) * 0.08 }}
-            className="flex flex-col rounded-2xl border border-charcoal/5 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl"
+            className="flex flex-col rounded-2xl border border-charcoal/5 dark:border-white/10 bg-white dark:bg-white/5 p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl"
           >
-            <div className="h-32 rounded-xl bg-gradient-to-br from-primary/15 to-primary-light/10" />
-            <h3 className="mt-5 font-heading text-lg font-semibold text-charcoal">
+            <div className="h-32 overflow-hidden rounded-xl">
+              <img
+                src={solution.image}
+                alt={solution.name}
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <h3 className="mt-5 font-heading text-lg font-semibold text-charcoal dark:text-white">
               {solution.name}
             </h3>
-            <p className="mt-2 text-sm leading-relaxed text-charcoal/60">{solution.description}</p>
+            <p className="mt-2 text-sm leading-relaxed text-charcoal/60 dark:text-white/60">{solution.description}</p>
             <ul className="mt-4 space-y-2">
               {solution.features.map((feature) => (
-                <li key={feature} className="flex items-center gap-2 text-sm text-charcoal/70">
+                <li key={feature} className="flex items-center gap-2 text-sm text-charcoal/70 dark:text-white/70">
                   <Check size={14} className="shrink-0 text-primary" />
                   {feature}
                 </li>

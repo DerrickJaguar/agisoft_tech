@@ -1,8 +1,15 @@
 import PageHero from '../components/PageHero'
 import Industries from '../sections/Industries'
 import CTASection from '../components/CTASection'
+import useSEO from '../hooks/useSEO'
 
 export default function IndustriesPage() {
+  useSEO({
+    title: 'Industries We Serve',
+    description:
+      'Agisoft Technologies builds domain-aware software for Healthcare, Education, Government, Financial Services, NGOs, Agriculture, Retail, and more.',
+  })
+
   return (
     <>
       <PageHero

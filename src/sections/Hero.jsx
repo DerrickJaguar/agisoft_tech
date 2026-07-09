@@ -1,6 +1,14 @@
-import { motion } from 'framer-motion'
+import { useRef, useState } from 'react'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowRight, CalendarCheck, Cloud, ShieldCheck, Sparkles } from 'lucide-react'
+import NetworkBackground from '../components/NetworkBackground'
+import ParticleField from '../components/ParticleField'
+import CountUp from '../components/CountUp'
+
+const prefersReducedMotion =
+  typeof window !== 'undefined' &&
+  window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
 
 const stats = [
   { value: '100+', label: 'Projects Completed' },
@@ -10,9 +18,34 @@ const stats = [
 ]
 
 export default function Hero() {
+  const sectionRef = useRef(null)
+  const [videoFailed, setVideoFailed] = useState(false)
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start start', 'end start'],
+  })
+  const bgY = useTransform(scrollYProgress, [0, 1], ['0%', '35%'])
+  const cardsY = useTransform(scrollYProgress, [0, 1], ['0%', '15%'])
+
   return (
-    <section className="relative overflow-hidden bg-charcoal pt-32 pb-24 sm:pt-40 sm:pb-32">
-      <div className="pointer-events-none absolute inset-0">
+    <section
+      ref={sectionRef}
+      className="relative overflow-hidden bg-charcoal pt-32 pb-24 sm:pt-40 sm:pb-32"
+    >
+      {!videoFailed && !prefersReducedMotion && (
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          onError={() => setVideoFailed(true)}
+          className="absolute inset-0 h-full w-full object-cover opacity-20"
+        >
+          <source src="/videos/hero-network.mp4" type="video/mp4" />
+        </video>
+      )}
+      <div className="absolute inset-0 bg-charcoal/40" />
+      <motion.div style={{ y: bgY }} className="pointer-events-none absolute inset-0">
         <div className="absolute -top-32 -left-32 h-[28rem] w-[28rem] rounded-full bg-primary/30 blur-[120px]" />
         <div className="absolute top-1/3 -right-24 h-[24rem] w-[24rem] rounded-full bg-primary-light/20 blur-[110px]" />
         <svg className="absolute inset-0 h-full w-full opacity-[0.08]" aria-hidden="true">
@@ -23,7 +56,9 @@ export default function Hero() {
           </defs>
           <rect width="100%" height="100%" fill="url(#grid)" />
         </svg>
-      </div>
+        <NetworkBackground className="absolute inset-0 h-full w-full opacity-40" />
+        <ParticleField className="absolute inset-0 h-full w-full" count={28} />
+      </motion.div>
 
       <div className="relative mx-auto grid max-w-7xl gap-16 px-6 sm:px-10 lg:grid-cols-2 lg:items-center lg:px-20">
         <motion.div
@@ -72,7 +107,7 @@ export default function Hero() {
                 transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
               >
                 <dt className="font-heading text-2xl font-bold text-white sm:text-3xl">
-                  {stat.value}
+                  <CountUp value={stat.value} />
                 </dt>
                 <dd className="mt-1 text-sm text-white/60">{stat.label}</dd>
               </motion.div>
@@ -85,10 +120,12 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
           className="relative hidden h-[420px] lg:block"
+          style={{ perspective: '1200px', y: cardsY }}
         >
           <motion.div
-            animate={{ y: [0, -14, 0] }}
+            animate={{ y: [0, -14, 0], rotateX: [4, -2, 4], rotateY: [-4, 3, -4] }}
             transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+            style={{ transformStyle: 'preserve-3d' }}
             className="absolute left-4 top-6 w-64 rounded-2xl border border-white/10 bg-white/5 p-5 shadow-2xl backdrop-blur-xl"
           >
             <div className="flex items-center gap-2 text-primary-light">
@@ -102,8 +139,9 @@ export default function Hero() {
           </motion.div>
 
           <motion.div
-            animate={{ y: [0, 16, 0] }}
+            animate={{ y: [0, 16, 0], rotateX: [-3, 3, -3], rotateY: [4, -3, 4] }}
             transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+            style={{ transformStyle: 'preserve-3d' }}
             className="absolute right-2 top-40 w-72 rounded-2xl border border-white/10 bg-white/5 p-5 font-mono text-xs text-white/70 shadow-2xl backdrop-blur-xl"
           >
             <div className="flex gap-1.5">
@@ -122,8 +160,9 @@ export default function Hero() {
           </motion.div>
 
           <motion.div
-            animate={{ y: [0, -12, 0] }}
+            animate={{ y: [0, -12, 0], rotateX: [3, -4, 3], rotateY: [-3, 2, -3] }}
             transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+            style={{ transformStyle: 'preserve-3d' }}
             className="absolute bottom-2 left-16 w-60 rounded-2xl border border-white/10 bg-white/5 p-5 shadow-2xl backdrop-blur-xl"
           >
             <div className="flex items-center gap-2 text-primary-light">

@@ -7,7 +7,7 @@ export default function CTASection({
 }) {
   return (
     <section className="section-padding mx-auto max-w-5xl">
-      <div className="rounded-3xl bg-gradient-to-br from-charcoal to-primary-dark px-8 py-14 text-center sm:px-16">
+      <div className="rounded-3xl bg-linear-to-br from-charcoal to-primary-dark px-8 py-14 text-center sm:px-16">
         <h2 className="font-heading text-2xl font-bold text-white sm:text-3xl">{title}</h2>
         <p className="mx-auto mt-3 max-w-xl text-white/70">{subtitle}</p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">

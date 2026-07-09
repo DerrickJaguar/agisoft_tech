@@ -2,13 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/images/Agi soft Main logo-03.png" />
+    <link rel="icon" type="image/png" href="/icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <meta name="theme-color" content="#0c7a3f" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="Agisoft Technologies is a premium software development company delivering custom software, mobile apps, cloud, AI, and cybersecurity solutions for businesses, governments, and enterprises across Africa and beyond."
     />
     <title>Agisoft Technologies | Innovative Software Solutions for a Digital Future</title>
+    <script>
+      (function () {
+        var stored = localStorage.getItem('agisoft-theme')
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (stored === 'dark' || (!stored && prefersDark)) {
+          document.documentElement.classList.add('dark')
+        }
+      })()
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

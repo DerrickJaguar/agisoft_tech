@@ -1,5 +1,6 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Mail, MapPin, Phone } from 'lucide-react'
+import { Mail, MapPin, Phone, CheckCircle2 } from 'lucide-react'
 import { FacebookIcon, LinkedinIcon, XIcon, InstagramIcon } from './SocialIcons'
 
 const quickLinks = [
@@ -25,6 +26,13 @@ const resourceLinks = [
 ]
 
 export default function Footer() {
+  const [subscribed, setSubscribed] = useState(false)
+
+  const handleSubscribe = (e) => {
+    e.preventDefault()
+    setSubscribed(true)
+  }
+
   return (
     <footer className="bg-charcoal text-white/70">
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 sm:px-10 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr] lg:px-20">
@@ -116,19 +124,31 @@ export default function Footer() {
               </a>
             </li>
           </ul>
-          <form className="mt-6 flex gap-2">
-            <input
-              type="email"
-              placeholder="Your email"
-              className="w-full rounded-full border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-white/40 focus:border-primary focus:outline-none"
-            />
-            <button
-              type="submit"
-              className="shrink-0 rounded-full bg-primary px-4 py-2.5 font-heading text-sm font-semibold text-white transition-colors hover:bg-primary-dark"
-            >
-              Join
-            </button>
-          </form>
+          {subscribed ? (
+            <p className="mt-6 flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2.5 text-sm font-medium text-primary-light">
+              <CheckCircle2 size={16} className="shrink-0" />
+              Thanks! You're subscribed.
+            </p>
+          ) : (
+            <form onSubmit={handleSubscribe} className="mt-6 flex gap-2">
+              <label htmlFor="footer-newsletter-email" className="sr-only">
+                Email address
+              </label>
+              <input
+                required
+                id="footer-newsletter-email"
+                type="email"
+                placeholder="Your email"
+                className="w-full rounded-full border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-white/40 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30"
+              />
+              <button
+                type="submit"
+                className="shrink-0 rounded-full bg-primary px-4 py-2.5 font-heading text-sm font-semibold text-white transition-colors hover:bg-primary-dark"
+              >
+                Join
+              </button>
+            </form>
+          )}
         </div>
       </div>
 

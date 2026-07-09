@@ -14,8 +14,10 @@ export default function SectionHeading({ eyebrow, title, subtitle, center = true
           {eyebrow}
         </span>
       )}
-      <h2 className="mt-3 font-heading text-3xl font-bold text-charcoal sm:text-4xl">{title}</h2>
-      {subtitle && <p className="mt-4 text-lg text-charcoal/60">{subtitle}</p>}
+      <h2 className="mt-3 font-heading text-3xl font-bold text-charcoal sm:text-4xl dark:text-white">
+        {title}
+      </h2>
+      {subtitle && <p className="mt-4 text-lg text-charcoal/60 dark:text-white/60">{subtitle}</p>}
     </motion.div>
   )
 }

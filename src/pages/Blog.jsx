@@ -1,9 +1,16 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, Calendar, Clock, ExternalLink } from 'lucide-react'
 import PageHero from '../components/PageHero'
+import useSEO from '../hooks/useSEO'
 import { blogPosts } from '../data/siteData'
 
 export default function Blog() {
+  useSEO({
+    title: 'Blog',
+    description:
+      'Insights on AI, cybersecurity, cloud, software engineering, and digital transformation from the Agisoft Technologies team.',
+  })
+
   return (
     <>
       <PageHero
@@ -21,7 +28,7 @@ export default function Blog() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: (i % 3) * 0.1 }}
-              className="group flex flex-col overflow-hidden rounded-2xl border border-charcoal/5 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-charcoal/5 dark:border-white/10 bg-white dark:bg-white/5 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl"
             >
               <div className="h-40 overflow-hidden">
                 <img
@@ -35,13 +42,13 @@ export default function Blog() {
                 <span className="font-heading text-xs font-semibold uppercase tracking-wide text-primary">
                   {post.category}
                 </span>
-                <h3 className="mt-2 font-heading text-lg font-semibold text-charcoal">
+                <h3 className="mt-2 font-heading text-lg font-semibold text-charcoal dark:text-white">
                   {post.title}
                 </h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-charcoal/60">
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-charcoal/60 dark:text-white/60">
                   {post.excerpt}
                 </p>
-                <div className="mt-5 flex items-center gap-4 text-xs text-charcoal/45">
+                <div className="mt-5 flex items-center gap-4 text-xs text-charcoal/45 dark:text-white/45">
                   <span className="flex items-center gap-1.5">
                     <Calendar size={13} />
                     {post.date}
@@ -65,7 +72,7 @@ export default function Blog() {
           ))}
         </div>
 
-        <p className="mt-10 flex items-center justify-center gap-1.5 text-center text-xs text-charcoal/40">
+        <p className="mt-10 flex items-center justify-center gap-1.5 text-center text-xs text-charcoal/40 dark:text-white/40">
           <ExternalLink size={13} />
           These articles link out to trusted external resources on each topic.
         </p>

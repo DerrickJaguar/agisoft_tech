@@ -30,10 +30,10 @@ export default function CompanyTimeline() {
                 <p className="font-heading text-sm font-semibold uppercase tracking-wide text-primary">
                   {item.year}
                 </p>
-                <h3 className="mt-1 font-heading text-lg font-semibold text-charcoal">
+                <h3 className="mt-1 font-heading text-lg font-semibold text-charcoal dark:text-white">
                   {item.title}
                 </h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-charcoal/60">
+                <p className="mt-1.5 text-sm leading-relaxed text-charcoal/60 dark:text-white/60">
                   {item.description}
                 </p>
               </div>

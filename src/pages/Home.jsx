@@ -1,3 +1,4 @@
+import useSEO from '../hooks/useSEO'
 import Hero from '../sections/Hero'
 import AboutTeaser from '../sections/AboutTeaser'
 import Services from '../sections/Services'
@@ -12,6 +13,12 @@ import FAQ from '../sections/FAQ'
 import Contact from '../sections/Contact'
 
 export default function Home() {
+  useSEO({
+    title: 'Innovative Software Solutions for a Digital Future',
+    description:
+      'Agisoft Technologies delivers custom software, mobile apps, cloud, AI, and cybersecurity solutions for businesses, governments, and enterprises across Africa and beyond.',
+  })
+
   return (
     <>
       <Hero />

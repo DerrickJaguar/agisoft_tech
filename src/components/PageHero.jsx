@@ -1,12 +1,23 @@
-import { motion } from 'framer-motion'
+import { useRef } from 'react'
+import { motion, useScroll, useTransform } from 'framer-motion'
 
 export default function PageHero({ eyebrow, title, subtitle }) {
+  const sectionRef = useRef(null)
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start start', 'end start'],
+  })
+  const bgY = useTransform(scrollYProgress, [0, 1], ['0%', '40%'])
+
   return (
-    <section className="relative overflow-hidden bg-charcoal pt-36 pb-20 sm:pt-44 sm:pb-24">
-      <div className="pointer-events-none absolute inset-0">
+    <section
+      ref={sectionRef}
+      className="relative overflow-hidden bg-charcoal pt-36 pb-20 sm:pt-44 sm:pb-24"
+    >
+      <motion.div style={{ y: bgY }} className="pointer-events-none absolute inset-0">
         <div className="absolute -top-24 left-1/4 h-80 w-80 rounded-full bg-primary/25 blur-[110px]" />
         <div className="absolute -bottom-24 right-1/4 h-80 w-80 rounded-full bg-primary-light/15 blur-[110px]" />
-      </div>
+      </motion.div>
 
       <motion.div
         initial={{ opacity: 0, y: 24 }}

@@ -194,21 +194,57 @@ export const industries = [
   { icon: Radio, name: 'Telecommunications' },
 ]
 
-export function getIndustryIcon(industryName) {
-  return industries.find((industry) => industry.name === industryName)?.icon ?? Building2
-}
-
-export const whyChooseUs = [
-  'Experienced Developers',
-  'Latest Technologies',
-  'Scalable Solutions',
-  'Fast Delivery',
-  'Secure Development',
-  'Transparent Pricing',
-  'Excellent Customer Support',
-  'Continuous Innovation',
-  'Affordable Enterprise Solutions',
-  'Reliable Maintenance',
+export const comparisonPoints = [
+  {
+    point: 'Experienced Developers',
+    agisoft: 'Senior engineers with proven enterprise experience',
+    others: 'Junior teams still learning on your project',
+  },
+  {
+    point: 'Latest Technologies',
+    agisoft: 'Modern, future-proof tech stacks',
+    others: 'Outdated tools and legacy frameworks',
+  },
+  {
+    point: 'Scalable Solutions',
+    agisoft: 'Architected to grow with your business',
+    others: 'Costly rebuilds needed as you scale',
+  },
+  {
+    point: 'Fast Delivery',
+    agisoft: 'Agile delivery in weeks, not years',
+    others: 'Slow, bureaucratic timelines',
+  },
+  {
+    point: 'Secure Development',
+    agisoft: 'Security built in from day one',
+    others: 'Security bolted on as an afterthought',
+  },
+  {
+    point: 'Transparent Pricing',
+    agisoft: 'Clear, fixed-price quotes upfront',
+    others: 'Hidden fees and scope creep',
+  },
+  {
+    point: 'Excellent Customer Support',
+    agisoft: '24/7 dedicated support team',
+    others: 'Support tickets into a void',
+  },
+  {
+    point: 'Continuous Innovation',
+    agisoft: 'Constantly evolving with new technology',
+    others: 'Stagnant systems after launch',
+  },
+  {
+    point: 'Affordable Enterprise Solutions',
+    agisoft: 'Enterprise-grade quality at fair pricing',
+    others: 'Overpriced for what you actually get',
+  },
+  {
+    point: 'Reliable Maintenance',
+    agisoft: 'Proactive monitoring and updates',
+    others: 'Radio silence after launch',
+  },
 ]
 
 export const technologies = {
@@ -504,9 +540,14 @@ export const careerBenefits = [
 export const navLinks = [
   { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
-  { label: 'Services', to: '/services' },
-  { label: 'Solutions', to: '/solutions' },
-  { label: 'Industries', to: '/industries' },
+  {
+    label: 'Services',
+    children: [
+      { label: 'Our Services', to: '/services' },
+      { label: 'Featured Solutions', to: '/solutions' },
+      { label: 'Industries We Serve', to: '/industries' },
+    ],
+  },
   { label: 'Portfolio', to: '/portfolio' },
   { label: 'Blog', to: '/blog' },
   { label: 'Careers', to: '/careers' },

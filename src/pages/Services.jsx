@@ -1,8 +1,15 @@
 import PageHero from '../components/PageHero'
 import Services from '../sections/Services'
 import CTASection from '../components/CTASection'
+import useSEO from '../hooks/useSEO'
 
 export default function ServicesPage() {
+  useSEO({
+    title: 'Our Services',
+    description:
+      'Explore Agisoft Technologies\' full range of services — custom software, mobile apps, cloud computing, AI, cybersecurity, UI/UX design, and more.',
+  })
+
   return (
     <>
       <PageHero

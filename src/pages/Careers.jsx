@@ -4,9 +4,16 @@ import { Briefcase, MapPin, Clock, CheckCircle2 } from 'lucide-react'
 import PageHero from '../components/PageHero'
 import SectionHeading from '../components/SectionHeading'
 import CareerApplicationForm from '../sections/CareerApplicationForm'
+import useSEO from '../hooks/useSEO'
 import { jobOpenings, internshipPrograms, careerBenefits } from '../data/siteData'
 
 export default function Careers() {
+  useSEO({
+    title: 'Careers',
+    description:
+      'Join Agisoft Technologies — explore open positions, internships, graduate programs, and benefits at a growing technology company.',
+  })
+
   const [applyPosition, setApplyPosition] = useState(null)
 
   const handleApply = (title) => {
@@ -25,7 +32,7 @@ export default function Careers() {
       <section className="section-padding mx-auto max-w-7xl">
         <SectionHeading eyebrow="Current Openings" title="Open positions" center={false} />
 
-        <div className="mt-10 divide-y divide-charcoal/10 rounded-2xl border border-charcoal/10">
+        <div className="mt-10 divide-y divide-charcoal/10 rounded-2xl border border-charcoal/10 dark:border-white/10">
           {jobOpenings.map((job, i) => (
             <motion.div
               key={job.title}
@@ -36,8 +43,8 @@ export default function Careers() {
               className="flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between"
             >
               <div>
-                <h3 className="font-heading text-lg font-semibold text-charcoal">{job.title}</h3>
-                <div className="mt-2 flex flex-wrap gap-4 text-sm text-charcoal/55">
+                <h3 className="font-heading text-lg font-semibold text-charcoal dark:text-white">{job.title}</h3>
+                <div className="mt-2 flex flex-wrap gap-4 text-sm text-charcoal/55 dark:text-white/55">
                   <span className="flex items-center gap-1.5">
                     <Briefcase size={14} />
                     {job.department}
@@ -64,7 +71,7 @@ export default function Careers() {
         </div>
       </section>
 
-      <section className="section-padding bg-surface">
+      <section className="section-padding bg-surface dark:bg-white/5">
         <div className="mx-auto max-w-7xl">
           <SectionHeading
             eyebrow="Grow With Us"
@@ -80,12 +87,12 @@ export default function Careers() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="rounded-2xl border border-charcoal/5 bg-white p-7"
+                className="rounded-2xl border border-charcoal/5 dark:border-white/10 bg-white dark:bg-white/5 p-7"
               >
-                <h3 className="font-heading text-lg font-semibold text-charcoal">
+                <h3 className="font-heading text-lg font-semibold text-charcoal dark:text-white">
                   {program.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-charcoal/60">
+                <p className="mt-2 text-sm leading-relaxed text-charcoal/60 dark:text-white/60">
                   {program.description}
                 </p>
               </motion.div>
@@ -105,10 +112,10 @@ export default function Careers() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.4, delay: (i % 6) * 0.06 }}
-              className="flex items-start gap-3 rounded-xl border border-charcoal/5 bg-surface p-5"
+              className="flex items-start gap-3 rounded-xl border border-charcoal/5 dark:border-white/10 bg-surface dark:bg-white/5 p-5"
             >
               <CheckCircle2 size={20} className="mt-0.5 shrink-0 text-primary" />
-              <span className="font-heading text-sm font-medium text-charcoal">{benefit}</span>
+              <span className="font-heading text-sm font-medium text-charcoal dark:text-white">{benefit}</span>
             </motion.div>
           ))}
         </div>

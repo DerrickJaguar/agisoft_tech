@@ -2,8 +2,7 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import SectionHeading from '../components/SectionHeading'
-import CoverArt from '../components/CoverArt'
-import { portfolioProjects, getIndustryIcon } from '../data/siteData'
+import { portfolioProjects } from '../data/siteData'
 
 const projects = portfolioProjects.slice(0, 3)
 
@@ -24,18 +23,25 @@ export default function PortfolioTeaser() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="group overflow-hidden rounded-2xl border border-charcoal/5 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl"
+            className="group overflow-hidden rounded-2xl border border-charcoal/5 dark:border-white/10 bg-white dark:bg-white/5 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl"
           >
-            <CoverArt icon={getIndustryIcon(project.industry)} seed={project.title} className="h-48">
+            <div className="relative h-48 overflow-hidden">
+              <img
+                src={project.image}
+                alt={project.title}
+                loading="lazy"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-charcoal/60 via-transparent to-transparent" />
               <span className="absolute bottom-4 left-4 rounded-full bg-white/10 px-3 py-1 font-heading text-xs font-semibold text-white backdrop-blur-sm">
                 {project.industry}
               </span>
-            </CoverArt>
+            </div>
             <div className="p-6">
-              <h3 className="font-heading text-lg font-semibold text-charcoal">
+              <h3 className="font-heading text-lg font-semibold text-charcoal dark:text-white">
                 {project.title}
               </h3>
-              <p className="mt-2 text-sm text-charcoal/50">{project.technologies.join(' · ')}</p>
+              <p className="mt-2 text-sm text-charcoal/50 dark:text-white/50">{project.technologies.join(' · ')}</p>
               <Link
                 to="/portfolio"
                 className="mt-4 inline-flex items-center gap-1.5 font-heading text-sm font-semibold text-primary hover:text-primary-dark"

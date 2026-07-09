@@ -25,7 +25,7 @@ const pillars = [
 
 export default function MissionVisionValues() {
   return (
-    <section className="section-padding bg-surface">
+    <section className="section-padding bg-surface dark:bg-white/5">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="What Drives Us"
@@ -33,7 +33,7 @@ export default function MissionVisionValues() {
           subtitle="The principles that shape every project we take on."
         />
 
-        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-3">
+        <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
           {pillars.map((pillar, i) => (
             <motion.div
               key={pillar.title}
@@ -41,15 +41,15 @@ export default function MissionVisionValues() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="rounded-2xl border border-charcoal/5 bg-white p-8 text-center"
+              className="rounded-2xl border border-charcoal/5 dark:border-white/10 bg-white dark:bg-white/5 p-8 text-center"
             >
               <div className="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-primary/10 text-primary">
                 <pillar.icon size={26} />
               </div>
-              <h3 className="mt-5 font-heading text-lg font-semibold text-charcoal">
+              <h3 className="mt-5 font-heading text-lg font-semibold text-charcoal dark:text-white">
                 {pillar.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-charcoal/60">
+              <p className="mt-2 text-sm leading-relaxed text-charcoal/60 dark:text-white/60">
                 {pillar.description}
               </p>
             </motion.div>
