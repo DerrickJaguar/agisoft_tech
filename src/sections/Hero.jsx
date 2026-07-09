@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, CalendarCheck, Cloud, ShieldCheck, Sparkles } from 'lucide-react'
 import NetworkBackground from '../components/NetworkBackground'
 import ParticleField from '../components/ParticleField'
-import CountUp from '../components/CountUp'
 
 const prefersReducedMotion =
   typeof window !== 'undefined' &&
@@ -107,7 +106,7 @@ export default function Hero() {
                 transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
               >
                 <dt className="font-heading text-2xl font-bold text-white sm:text-3xl">
-                  <CountUp value={stat.value} />
+                  {stat.value}
                 </dt>
                 <dd className="mt-1 text-sm text-white/60">{stat.label}</dd>
               </motion.div>
