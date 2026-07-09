@@ -133,41 +133,49 @@ export const solutions = [
     name: 'School Management System',
     description: 'End-to-end platform for admissions, academics, fees, and communication.',
     features: ['Student & staff records', 'Fees & payments', 'Timetabling', 'Parent portal'],
+    image: '/images/solutions/school.jpg',
   },
   {
     name: 'HR Management System',
     description: 'Manage recruitment, performance, leave, and employee data in one place.',
     features: ['Recruitment pipeline', 'Performance reviews', 'Leave management', 'Self-service portal'],
+    image: '/images/solutions/hr.jpg',
   },
   {
     name: 'Payroll System',
     description: 'Automated payroll processing with statutory compliance built in.',
     features: ['Automated payslips', 'Tax & NSSF compliance', 'Multi-currency support', 'Bank integration'],
+    image: '/images/solutions/payroll.jpg',
   },
   {
     name: 'Accounting Software',
     description: 'Complete financial management for businesses of every size.',
     features: ['Invoicing & billing', 'Expense tracking', 'Financial reporting', 'Multi-branch support'],
+    image: '/images/solutions/accounting.jpg',
   },
   {
     name: 'Inventory Management System',
     description: 'Real-time stock visibility across warehouses and branches.',
     features: ['Stock tracking', 'Purchase orders', 'Low-stock alerts', 'Barcode scanning'],
+    image: '/images/solutions/inventory.jpg',
   },
   {
     name: 'POS System',
     description: 'Fast, reliable point-of-sale built for retail and hospitality.',
     features: ['Offline mode', 'Receipt printing', 'Sales analytics', 'Multi-till support'],
+    image: '/images/solutions/pos.jpg',
   },
   {
     name: 'Hotel Management System',
     description: 'Manage bookings, rooms, billing, and guest experience effortlessly.',
     features: ['Reservations', 'Housekeeping', 'Billing & invoicing', 'Channel manager integration'],
+    image: '/images/solutions/hotel.jpg',
   },
   {
     name: 'SACCO Management System',
     description: 'Comprehensive savings, loans, and member management for SACCOs.',
     features: ['Member accounts', 'Loan processing', 'Savings & shares', 'SMS notifications'],
+    image: '/images/solutions/sacco.jpg',
   },
 ]
 
@@ -185,6 +193,10 @@ export const industries = [
   { icon: Truck, name: 'Transport & Logistics' },
   { icon: Radio, name: 'Telecommunications' },
 ]
+
+export function getIndustryIcon(industryName) {
+  return industries.find((industry) => industry.name === industryName)?.icon ?? Building2
+}
 
 export const whyChooseUs = [
   'Experienced Developers',
@@ -321,6 +333,7 @@ export const portfolioProjects = [
     challenge: 'Legacy core banking systems were slow, hard to maintain, and offered no self-service digital channel for customers.',
     solution: 'Built a secure digital banking platform with real-time transactions, account management, and a modern customer portal.',
     impact: '40% reduction in branch visits and a 60% increase in digital transaction volume within six months.',
+    image: '/images/portfolio/bank.jpg',
   },
   {
     title: 'National School Network Rollout',
@@ -329,6 +342,7 @@ export const portfolioProjects = [
     challenge: 'A network of 50+ schools had no unified system for admissions, fees, or academic records.',
     solution: 'Delivered a multi-tenant School Management System with a parent mobile app and centralized reporting dashboard.',
     impact: 'Cut fee reconciliation time by 70% and gave school administrators real-time visibility across all campuses.',
+    image: '/images/portfolio/school.jpg',
   },
   {
     title: 'Agro-Supply Chain Tracker',
@@ -337,6 +351,7 @@ export const portfolioProjects = [
     challenge: 'Cooperative could not track produce from farm to warehouse, leading to spoilage and payment disputes.',
     solution: 'Built a supply chain tracking platform with barcode scanning, farmer payment records, and inventory forecasting.',
     impact: 'Reduced post-harvest losses by 25% and shortened farmer payment cycles from weeks to days.',
+    image: '/images/portfolio/agriculture.jpg',
   },
   {
     title: 'SACCO Digital Transformation',
@@ -345,6 +360,7 @@ export const portfolioProjects = [
     challenge: 'Manual, paper-based loan and savings processing was slow and error-prone for a growing SACCO membership.',
     solution: 'Delivered a full SACCO Management System with a member self-service portal and automated loan processing.',
     impact: 'Loan approval time dropped from 2 weeks to 48 hours, with membership growing 3x in one year.',
+    image: '/images/portfolio/sacco.jpg',
   },
   {
     title: 'Hospital Patient Records System',
@@ -353,6 +369,7 @@ export const portfolioProjects = [
     challenge: 'Paper-based patient records made it difficult to coordinate care across departments and track history.',
     solution: 'Implemented a secure electronic health records system with role-based access and appointment scheduling.',
     impact: 'Reduced patient wait times by 35% and eliminated duplicate testing from lost paper records.',
+    image: '/images/portfolio/healthcare.jpg',
   },
   {
     title: 'Retail Chain POS & Inventory',
@@ -361,6 +378,7 @@ export const portfolioProjects = [
     challenge: 'A multi-branch retail chain lacked real-time visibility into stock levels and sales performance.',
     solution: 'Rolled out a unified POS and inventory management system across all branches with centralized analytics.',
     impact: 'Stock-outs dropped by 45% and head office gained real-time sales visibility across every branch.',
+    image: '/images/portfolio/retail.jpg',
   },
 ]
 
@@ -371,6 +389,8 @@ export const blogPosts = [
     excerpt: 'Beyond the hype — a grounded look at where AI delivers real ROI for growing businesses today.',
     date: 'June 2, 2026',
     readTime: '6 min read',
+    link: 'https://www.ibm.com/topics/artificial-intelligence',
+    image: '/images/blog/ai.jpg',
   },
   {
     category: 'Cybersecurity',
@@ -378,6 +398,8 @@ export const blogPosts = [
     excerpt: 'The most common security gaps we see in fast-growing businesses, and how to close them.',
     date: 'May 18, 2026',
     readTime: '5 min read',
+    link: 'https://www.ibm.com/topics/cybersecurity',
+    image: '/images/blog/cybersecurity.jpg',
   },
   {
     category: 'Cloud',
@@ -385,6 +407,8 @@ export const blogPosts = [
     excerpt: 'A practical framework for selecting the right cloud provider for your workload and budget.',
     date: 'April 30, 2026',
     readTime: '7 min read',
+    link: 'https://aws.amazon.com/what-is-cloud-computing/',
+    image: '/images/blog/cloud.jpg',
   },
   {
     category: 'Software Engineering',
@@ -392,6 +416,8 @@ export const blogPosts = [
     excerpt: 'Technical debt is cheaper to avoid than to pay down. Here is how we design for scale early.',
     date: 'April 9, 2026',
     readTime: '6 min read',
+    link: 'https://martinfowler.com/architecture/',
+    image: '/images/blog/software.jpg',
   },
   {
     category: 'Digital Transformation',
@@ -399,6 +425,8 @@ export const blogPosts = [
     excerpt: 'Lessons from modernizing paper-based processes for public sector institutions.',
     date: 'March 22, 2026',
     readTime: '8 min read',
+    link: 'https://www.ibm.com/topics/digital-transformation',
+    image: '/images/blog/digital-transformation.jpg',
   },
   {
     category: 'Mobile Apps',
@@ -406,6 +434,8 @@ export const blogPosts = [
     excerpt: 'Flutter, React Native, or native — how we decide based on your product and timeline.',
     date: 'March 3, 2026',
     readTime: '5 min read',
+    link: 'https://www.browserstack.com/guide/flutter-vs-react-native',
+    image: '/images/blog/mobile.jpg',
   },
   {
     category: 'Innovation',
@@ -413,6 +443,8 @@ export const blogPosts = [
     excerpt: 'How our engineering teams stay ahead of the curve while still shipping reliably.',
     date: 'February 14, 2026',
     readTime: '4 min read',
+    link: 'https://hbr.org/topic/subject/innovation',
+    image: '/images/blog/innovation.jpg',
   },
 ]
 

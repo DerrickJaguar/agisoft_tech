@@ -2,7 +2,8 @@ import { useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
 import PageHero from '../components/PageHero'
 import CTASection from '../components/CTASection'
-import { portfolioProjects } from '../data/siteData'
+import CoverArt from '../components/CoverArt'
+import { portfolioProjects, getIndustryIcon } from '../data/siteData'
 
 export default function Portfolio() {
   const industries = useMemo(
@@ -50,12 +51,11 @@ export default function Portfolio() {
               transition={{ duration: 0.5, delay: (i % 2) * 0.1 }}
               className="overflow-hidden rounded-2xl border border-charcoal/5 bg-white shadow-sm"
             >
-              <div className="relative h-48 bg-gradient-to-br from-charcoal to-primary-dark">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.15),transparent_60%)]" />
+              <CoverArt icon={getIndustryIcon(project.industry)} seed={project.title} className="relative h-48">
                 <span className="absolute bottom-4 left-6 rounded-full bg-white/10 px-3 py-1 font-heading text-xs font-semibold text-white backdrop-blur-sm">
                   {project.industry}
                 </span>
-              </div>
+              </CoverArt>
               <div className="p-7">
                 <h3 className="font-heading text-xl font-semibold text-charcoal">
                   {project.title}

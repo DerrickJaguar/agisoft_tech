@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { CheckCircle2, Paperclip } from 'lucide-react'
+import { CheckCircle2, AlertCircle } from 'lucide-react'
 import SectionHeading from '../components/SectionHeading'
 import { jobOpenings } from '../data/siteData'
+
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mbdvvgeb'
 
 const positionOptions = [
   ...jobOpenings.map((job) => job.title),
@@ -11,37 +13,31 @@ const positionOptions = [
 ]
 
 export default function CareerApplicationForm({ presetPosition, id = 'apply' }) {
-  const [submitted, setSubmitted] = useState(false)
+  const [status, setStatus] = useState('idle')
   const defaultPosition = presetPosition || positionOptions[0]
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    const formData = new FormData(e.target)
-    const name = formData.get('name')
-    const email = formData.get('email')
-    const phone = formData.get('phone')
-    const message = formData.get('message')
-    const position = formData.get('position')
+    setStatus('submitting')
+    const form = e.target
+    const formData = new FormData(form)
 
-    const subject = `Job Application - ${position}`
-    const body = [
-      `Position: ${position}`,
-      `Name: ${name}`,
-      `Email: ${email}`,
-      `Phone: ${phone || 'N/A'}`,
-      '',
-      'Cover Letter / Message:',
-      message,
-      '',
-      '---',
-      'Please remember to attach your CV/resume to this email before sending.',
-    ].join('\n')
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        body: formData,
+        headers: { Accept: 'application/json' },
+      })
 
-    window.location.href = `mailto:info@agisofttechnologies.com?subject=${encodeURIComponent(
-      subject,
-    )}&body=${encodeURIComponent(body)}`
-
-    setSubmitted(true)
+      if (response.ok) {
+        setStatus('success')
+        form.reset()
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
   }
 
   return (
@@ -50,7 +46,7 @@ export default function CareerApplicationForm({ presetPosition, id = 'apply' }) 
         <SectionHeading
           eyebrow="Apply Now"
           title="Submit your application"
-          subtitle="Fill in your details and we'll open a pre-filled email to our hiring team — just attach your CV before sending."
+          subtitle="Fill in your details below and our hiring team will follow up by email to request your CV."
         />
 
         <motion.div
@@ -60,19 +56,19 @@ export default function CareerApplicationForm({ presetPosition, id = 'apply' }) 
           transition={{ duration: 0.6 }}
           className="mt-10 rounded-2xl border border-charcoal/5 bg-white p-8"
         >
-          {submitted ? (
+          {status === 'success' ? (
             <div className="flex flex-col items-center py-10 text-center">
               <CheckCircle2 size={48} className="text-primary" />
               <h3 className="mt-4 font-heading text-xl font-semibold text-charcoal">
-                Almost done!
+                Application received!
               </h3>
               <p className="mt-2 max-w-sm text-sm text-charcoal/60">
-                We've opened your email client with your application pre-filled. Please attach
-                your CV/resume and hit send to complete your application.
+                Thanks for applying. Our hiring team will review your application and get back to
+                you if there's a match.
               </p>
               <button
                 type="button"
-                onClick={() => setSubmitted(false)}
+                onClick={() => setStatus('idle')}
                 className="mt-6 font-heading text-sm font-semibold text-primary hover:text-primary-dark"
               >
                 Submit another application
@@ -141,21 +137,24 @@ export default function CareerApplicationForm({ presetPosition, id = 'apply' }) 
                   name="message"
                   rows={5}
                   className="mt-2 w-full rounded-lg border border-charcoal/10 bg-surface px-4 py-3 text-sm focus:border-primary focus:outline-none"
-                  placeholder="Tell us why you'd be a great fit..."
+                  placeholder="Tell us why you'd be a great fit... Feel free to include a link to your CV or LinkedIn profile."
                 />
               </div>
 
-              <p className="flex items-start gap-2 text-xs text-charcoal/50 sm:col-span-2">
-                <Paperclip size={14} className="mt-0.5 shrink-0" />
-                Submitting opens your email client with these details pre-filled — please attach
-                your CV/resume before sending.
-              </p>
+              {status === 'error' && (
+                <div className="flex items-start gap-2 rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700 sm:col-span-2">
+                  <AlertCircle size={16} className="mt-0.5 shrink-0" />
+                  Something went wrong sending your application. Please try again, or email us
+                  directly at info@agisofttechnologies.com.
+                </div>
+              )}
 
               <button
                 type="submit"
-                className="rounded-full bg-primary px-7 py-3.5 font-heading text-sm font-semibold text-white shadow-sm shadow-primary/30 transition-colors hover:bg-primary-dark sm:col-span-2 sm:w-fit"
+                disabled={status === 'submitting'}
+                className="rounded-full bg-primary px-7 py-3.5 font-heading text-sm font-semibold text-white shadow-sm shadow-primary/30 transition-colors hover:bg-primary-dark disabled:cursor-not-allowed disabled:opacity-60 sm:col-span-2 sm:w-fit"
               >
-                Continue to Email
+                {status === 'submitting' ? 'Submitting...' : 'Submit Application'}
               </button>
             </form>
           )}

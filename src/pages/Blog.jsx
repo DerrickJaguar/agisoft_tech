@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, Calendar, Clock } from 'lucide-react'
+import { ArrowRight, Calendar, Clock, ExternalLink } from 'lucide-react'
 import PageHero from '../components/PageHero'
 import { blogPosts } from '../data/siteData'
 
@@ -23,7 +23,14 @@ export default function Blog() {
               transition={{ duration: 0.5, delay: (i % 3) * 0.1 }}
               className="group flex flex-col overflow-hidden rounded-2xl border border-charcoal/5 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl"
             >
-              <div className="h-40 bg-gradient-to-br from-primary/20 to-primary-light/10" />
+              <div className="h-40 overflow-hidden">
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
               <div className="flex flex-1 flex-col p-6">
                 <span className="font-heading text-xs font-semibold uppercase tracking-wide text-primary">
                   {post.category}
@@ -44,17 +51,24 @@ export default function Blog() {
                     {post.readTime}
                   </span>
                 </div>
-                <button
-                  type="button"
+                <a
+                  href={post.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-4 inline-flex w-fit items-center gap-1.5 font-heading text-sm font-semibold text-primary transition-colors group-hover:text-primary-dark"
                 >
                   Read Article
                   <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
-                </button>
+                </a>
               </div>
             </motion.article>
           ))}
         </div>
+
+        <p className="mt-10 flex items-center justify-center gap-1.5 text-center text-xs text-charcoal/40">
+          <ExternalLink size={13} />
+          These articles link out to trusted external resources on each topic.
+        </p>
       </section>
     </>
   )

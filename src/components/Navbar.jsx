@@ -28,41 +28,43 @@ export default function Navbar() {
           />
         </Link>
 
-        <ul className="hidden items-center gap-8 lg:flex">
-          {navLinks.map((link) => (
-            <li key={link.to}>
-              <NavLink
-                to={link.to}
-                className={({ isActive }) =>
-                  `font-heading text-sm font-medium transition-colors hover:text-primary ${
-                    isActive ? 'text-primary' : 'text-charcoal/80'
-                  }`
-                }
-              >
-                {link.label}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
+        <div className="hidden items-center gap-8 xl:flex">
+          <ul className="flex items-center gap-6 2xl:gap-8">
+            {navLinks.map((link) => (
+              <li key={link.to}>
+                <NavLink
+                  to={link.to}
+                  className={({ isActive }) =>
+                    `whitespace-nowrap font-heading text-sm font-medium transition-colors hover:text-primary ${
+                      isActive ? 'text-primary' : 'text-charcoal/80'
+                    }`
+                  }
+                >
+                  {link.label}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
 
-        <div className="hidden items-center gap-3 lg:flex">
-          <Link
-            to="/contact"
-            className="rounded-full border border-primary/30 px-5 py-2.5 font-heading text-sm font-semibold text-primary transition-colors hover:bg-primary/5"
-          >
-            Book Free Consultation
-          </Link>
-          <Link
-            to="/contact"
-            className="rounded-full bg-primary px-5 py-2.5 font-heading text-sm font-semibold text-white shadow-sm shadow-primary/30 transition-colors hover:bg-primary-dark"
-          >
-            Get Started
-          </Link>
+          <div className="flex items-center gap-3">
+            <Link
+              to="/contact"
+              className="whitespace-nowrap rounded-full border border-primary/30 px-5 py-2.5 font-heading text-sm font-semibold text-primary transition-colors hover:bg-primary/5"
+            >
+              Book Free Consultation
+            </Link>
+            <Link
+              to="/contact"
+              className="whitespace-nowrap rounded-full bg-primary px-5 py-2.5 font-heading text-sm font-semibold text-white shadow-sm shadow-primary/30 transition-colors hover:bg-primary-dark"
+            >
+              Get Started
+            </Link>
+          </div>
         </div>
 
         <button
           type="button"
-          className="grid h-10 w-10 place-items-center rounded-lg text-charcoal lg:hidden"
+          className="grid h-10 w-10 place-items-center rounded-lg text-charcoal xl:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
         >
@@ -71,7 +73,7 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-charcoal/10 bg-white px-6 pb-6 lg:hidden">
+        <div className="border-t border-charcoal/10 bg-white px-6 pb-6 xl:hidden">
           <ul className="flex flex-col gap-1 pt-4">
             {navLinks.map((link) => (
               <li key={link.to}>
