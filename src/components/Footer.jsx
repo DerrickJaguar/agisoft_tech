@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Mail, MapPin, Phone, CheckCircle2 } from 'lucide-react'
-import { FacebookIcon, LinkedinIcon, XIcon, InstagramIcon } from './SocialIcons'
+import { FacebookIcon, LinkedinIcon, XIcon, InstagramIcon, TiktokIcon } from './SocialIcons'
 import { services, slugify } from '../data/siteData'
 
 const quickLinks = [
@@ -24,6 +24,13 @@ const serviceLinks = featuredServiceTitles
   .map((title) => services.find((s) => s.title === title))
   .filter(Boolean)
   .map((service) => ({ label: service.title, to: `/services/${slugify(service.title)}` }))
+
+const socialLinks = [  
+  { Icon: LinkedinIcon, href: 'https://www.linkedin.com/company/agisofttechnologies/', label: 'LinkedIn' },
+  { Icon: XIcon, href: 'https://x.com/agibooks?s=11&t=SGb2g7g44eMza7EdmGUWtA', label: 'X (Twitter)' },
+  { Icon: InstagramIcon, href: 'https://www.instagram.com/agisofttechnologies/', label: 'Instagram' },
+  { Icon: TiktokIcon, href: 'https://www.tiktok.com/@agisofttechnologi?_r=1&_t=ZN-97uzW2LsGSk', label: 'TikTok' },
+]
 
 const resourceLinks = [
   { label: 'Privacy Policy', to: '/privacy' },
@@ -53,12 +60,14 @@ export default function Footer() {
             across Africa and beyond.
           </p>
           <div className="mt-6 flex gap-3">
-            {[FacebookIcon, LinkedinIcon, XIcon, InstagramIcon].map((Icon, i) => (
+            {socialLinks.map(({ Icon, href, label }) => (
               <a
-                key={i}
-                href="#"
-                className="grid h-9 w-9 place-items-center rounded-full bg-white/5 transition-colors hover:bg-primary hover:text-white"
-                aria-label="Social link"
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="grid h-9 w-9 place-items-center rounded-full bg-white/5 transition-all hover:scale-110 hover:bg-white/15"
+                aria-label={label}
               >
                 <Icon />
               </a>
