@@ -33,9 +33,8 @@ export default function Contact() {
   const [searchParams] = useSearchParams()
 
   const requestedService = searchParams.get('service')
-  const defaultService = services.some((s) => s.title === requestedService)
-    ? requestedService
-    : services[0].title
+  const isKnownService = services.some((s) => s.title === requestedService)
+  const defaultService = requestedService || services[0].title
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -160,6 +159,9 @@ export default function Contact() {
                   defaultValue={defaultService}
                   className="mt-2 w-full rounded-lg border border-charcoal/10 dark:border-white/10 bg-white dark:bg-white/5 px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30"
                 >
+                  {requestedService && !isKnownService && (
+                    <option value={requestedService}>{requestedService}</option>
+                  )}
                   {services.map((service) => (
                     <option key={service.title} value={service.title}>
                       {service.title}

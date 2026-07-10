@@ -44,10 +44,10 @@ export default function FeaturedSolutions() {
               ))}
             </ul>
             <Link
-              to="/solutions"
+              to={`/contact?service=${encodeURIComponent(solution.name)}`}
               className="mt-6 inline-flex items-center gap-1.5 font-heading text-sm font-semibold text-primary hover:text-primary-dark"
             >
-              View Details
+              Discuss This Solution
               <ArrowRight size={14} />
             </Link>
           </motion.div>

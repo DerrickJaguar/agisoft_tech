@@ -1,9 +1,7 @@
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Briefcase, MapPin, Clock, CheckCircle2 } from 'lucide-react'
 import PageHero from '../components/PageHero'
 import SectionHeading from '../components/SectionHeading'
-import CareerApplicationForm from '../sections/CareerApplicationForm'
 import useSEO from '../hooks/useSEO'
 import { jobOpenings, internshipPrograms, careerBenefits } from '../data/siteData'
 
@@ -13,13 +11,6 @@ export default function Careers() {
     description:
       'Join Agisoft Technologies — explore open positions, internships, graduate programs, and benefits at a growing technology company.',
   })
-
-  const [applyPosition, setApplyPosition] = useState(null)
-
-  const handleApply = (title) => {
-    setApplyPosition(title)
-    document.getElementById('apply')?.scrollIntoView({ behavior: 'smooth' })
-  }
 
   return (
     <>
@@ -59,13 +50,6 @@ export default function Careers() {
                   </span>
                 </div>
               </div>
-              <button
-                type="button"
-                onClick={() => handleApply(job.title)}
-                className="shrink-0 rounded-full bg-primary px-6 py-2.5 text-center font-heading text-sm font-semibold text-white transition-colors hover:bg-primary-dark"
-              >
-                Apply Now
-              </button>
             </motion.div>
           ))}
         </div>
@@ -120,8 +104,6 @@ export default function Careers() {
           ))}
         </div>
       </section>
-
-      <CareerApplicationForm presetPosition={applyPosition} />
     </>
   )
 }

@@ -3,7 +3,7 @@ import { Navigate, Link, useParams } from 'react-router-dom'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowRight, ArrowLeft, CheckCircle2 } from 'lucide-react'
 import CTASection from '../components/CTASection'
-import useSEO from '../hooks/useSEO'
+import useSEO, { SITE_URL } from '../hooks/useSEO'
 import { services, processSteps, slugify } from '../data/siteData'
 
 export default function ServiceDetail() {
@@ -23,6 +23,31 @@ export default function ServiceDetail() {
   useSEO({
     title: service?.title,
     description: service?.description,
+    image: service?.image,
+    jsonLd: service && [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: service.title,
+        description: service.description,
+        provider: {
+          '@type': 'ProfessionalService',
+          name: 'Agisoft Technologies',
+          url: SITE_URL,
+        },
+        areaServed: 'Africa',
+        url: `${SITE_URL}/services/${slug}`,
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+          { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_URL}/services` },
+          { '@type': 'ListItem', position: 3, name: service.title, item: `${SITE_URL}/services/${slug}` },
+        ],
+      },
+    ],
   })
 
   if (!service) return <Navigate to="/services" replace />
