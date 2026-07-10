@@ -6,13 +6,23 @@ import LiveChatWidget from './LiveChatWidget'
 import BackToTopButton from './BackToTopButton'
 import NewsletterPopup from './NewsletterPopup'
 import CookieConsent from './CookieConsent'
+import useContentProtection from '../hooks/useContentProtection'
 
 export default function Layout() {
-  const { pathname } = useLocation()
+  const { pathname, hash } = useLocation()
 
   useEffect(() => {
+    if (hash) {
+      const el = document.querySelector(hash)
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        return
+      }
+    }
     window.scrollTo({ top: 0 })
-  }, [pathname])
+  }, [pathname, hash])
+
+  useContentProtection()
 
   return (
     <div className="flex min-h-screen flex-col">

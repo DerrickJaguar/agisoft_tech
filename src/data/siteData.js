@@ -29,102 +29,125 @@ import {
   Radio,
 } from 'lucide-react'
 
+export const slugify = (str) =>
+  str
+    .toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '')
+
 export const services = [
   {
     icon: Code2,
     title: 'Custom Software Development',
     description: 'Tailor-made software engineered around your exact business processes.',
     benefit: 'Built to fit, built to scale',
+    image: '/images/services/custom-software.jpg',
   },
   {
     icon: Globe,
     title: 'Website Development',
     description: 'Fast, secure, and beautifully designed websites that convert visitors.',
     benefit: 'Premium web experiences',
+    image: '/images/services/website-development.jpg',
   },
   {
     icon: Smartphone,
     title: 'Mobile App Development',
     description: 'Native and cross-platform apps for iOS and Android that users love.',
     benefit: 'One codebase, every device',
+    image: '/images/services/mobile-app.jpg',
   },
   {
     icon: Building2,
     title: 'Enterprise Systems (ERP & CRM)',
     description: 'Streamline operations with powerful, unified enterprise platforms.',
     benefit: 'Run your business in one place',
+    image: '/images/services/enterprise-systems.jpg',
   },
   {
     icon: BrainCircuit,
     title: 'Artificial Intelligence Solutions',
     description: 'Practical AI that automates decisions and unlocks new efficiency.',
     benefit: 'Intelligence at scale',
+    image: '/images/services/ai-solutions.jpg',
   },
   {
     icon: Cpu,
     title: 'Machine Learning Applications',
     description: 'Predictive models that turn your data into a competitive advantage.',
     benefit: 'Smarter predictions, better outcomes',
+    image: '/images/services/machine-learning.jpg',
   },
   {
     icon: Cloud,
     title: 'Cloud Computing',
     description: 'Migrate, build, and scale on secure, resilient cloud infrastructure.',
     benefit: 'Scale without limits',
+    image: '/images/services/cloud-computing.jpg',
   },
   {
     icon: ShieldCheck,
     title: 'Cybersecurity',
     description: 'Protect your systems and data with enterprise-grade security.',
     benefit: 'Sleep easy, stay protected',
+    image: '/images/services/cybersecurity.jpg',
   },
   {
     icon: Palette,
     title: 'UI/UX Design',
     description: 'Intuitive, elegant interfaces designed around real user behavior.',
     benefit: 'Design that delights',
+    image: '/images/services/ui-ux-design.jpg',
   },
   {
     icon: Workflow,
     title: 'Business Process Automation',
     description: 'Eliminate manual work with intelligent, automated workflows.',
     benefit: 'Do more with less effort',
+    image: '/images/services/process-automation.jpg',
   },
   {
     icon: Plug,
     title: 'API Development',
     description: 'Robust, well-documented APIs that connect your entire ecosystem.',
     benefit: 'Seamless connectivity',
+    image: '/images/services/api-development.jpg',
   },
   {
     icon: Network,
     title: 'System Integration',
     description: 'Unify disparate tools and platforms into one cohesive system.',
     benefit: 'One system, zero silos',
+    image: '/images/services/system-integration.jpg',
   },
   {
     icon: Headset,
     title: 'IT Consultancy',
     description: 'Strategic technology guidance from experienced solution architects.',
     benefit: 'Expert advice, real results',
+    image: '/images/services/it-consultancy.jpg',
   },
   {
     icon: Wrench,
     title: 'Software Maintenance',
     description: 'Ongoing support and updates that keep your systems running smoothly.',
     benefit: 'Reliability you can count on',
+    image: '/images/services/software-maintenance.jpg',
   },
   {
     icon: Database,
     title: 'Database Development',
     description: 'Well-structured, high-performance databases built for growth.',
     benefit: 'Your data, organized and fast',
+    image: '/images/services/database-development.jpg',
   },
   {
     icon: Server,
     title: 'Hosting & Cloud Infrastructure',
     description: 'Managed hosting and infrastructure with guaranteed uptime.',
     benefit: 'Always on, always secure',
+    image: '/images/services/hosting-infrastructure.jpg',
   },
 ]
 
@@ -292,9 +315,44 @@ export const testimonials = [
 
 export const faqs = [
   {
+    question: 'What technologies and tech stack do you build with?',
+    answer:
+      'We work across modern, production-proven stacks: React, Next.js, Angular, and Vue on the frontend; Node.js, Laravel, Python, Java, .NET, and PHP on the backend; Flutter, React Native, Swift, and Kotlin for mobile; and PostgreSQL, MySQL, MongoDB, and SQL Server for data. We choose the right combination for your project rather than forcing a one-size-fits-all stack.',
+  },
+  {
+    question: 'Can you integrate AI or machine learning into our existing systems?',
+    answer:
+      'Yes. We build practical AI features — predictive analytics, intelligent automation, recommendation engines, and NLP-driven tools — and can integrate them directly into your current software rather than requiring a full rebuild.',
+  },
+  {
+    question: 'How do you decide between AWS, Azure, and Google Cloud for our hosting?',
+    answer:
+      'The right cloud depends on your existing tools, compliance needs, and budget. We architect and manage infrastructure on AWS, Microsoft Azure, and Google Cloud, and recommend the provider that fits your use case rather than pushing a default — with guaranteed uptime and proactive monitoring.',
+  },
+  {
+    question: 'How do you keep our systems and data secure?',
+    answer:
+      'Security is built into every stage of development, not bolted on at the end: secure coding practices, encryption in transit and at rest, secure authentication (including MFA and role-based access), regular code reviews, and vulnerability assessments before and after launch.',
+  },
+  {
+    question: 'Do you build native apps, or ones that work on both iOS and Android?',
+    answer:
+      'Both. We build cross-platform apps with Flutter or React Native when speed and shared codebase matter, and fully native apps with Swift or Kotlin when you need maximum performance or deep platform-specific integration.',
+  },
+  {
+    question: 'Can you integrate with or modernize our existing/legacy systems?',
+    answer:
+      'Yes — this is one of our core specialties. We design robust APIs and use system integration techniques to connect legacy software, third-party platforms, and modern applications, and can incrementally modernize old systems without disrupting your operations.',
+  },
+  {
+    question: 'Do you use modern DevOps practices like CI/CD, Docker, and Kubernetes?',
+    answer:
+      'Yes. We containerize applications with Docker, orchestrate at scale with Kubernetes, and set up automated CI/CD pipelines using GitHub, GitLab, and Jenkins so your releases are fast, repeatable, and low-risk.',
+  },
+  {
     question: 'How long does a typical project take?',
     answer:
-      'Project timelines vary by scope, but most custom software projects take 6-16 weeks from discovery to launch. We provide a detailed timeline after our initial consultation.',
+      'Project timelines vary by scope, but most custom software projects take 6-16 weeks from discovery to launch. We provide a detailed timeline after our initial technical consultation.',
   },
   {
     question: 'How is pricing structured?',
@@ -302,29 +360,14 @@ export const faqs = [
       'We offer transparent, fixed-price quotes for defined-scope projects and flexible retainer models for ongoing development. There are no hidden costs.',
   },
   {
-    question: 'Who owns the software after delivery?',
+    question: 'Who owns the software and source code after delivery?',
     answer:
       'You do. Upon final payment, you receive full ownership of the source code and intellectual property for custom-built solutions.',
   },
   {
-    question: 'Do you provide maintenance after launch?',
+    question: 'What kind of support and maintenance do you provide after launch?',
     answer:
-      'Yes. We offer flexible maintenance and support packages to keep your systems secure, updated, and running smoothly long after launch.',
-  },
-  {
-    question: 'How do you handle security?',
-    answer:
-      'Security is built into every stage of our development process, including code reviews, encryption, secure authentication, and regular vulnerability assessments.',
-  },
-  {
-    question: 'Can you host our application?',
-    answer:
-      'Yes, we offer managed hosting and cloud infrastructure services on AWS, Azure, and Google Cloud, with guaranteed uptime and monitoring.',
-  },
-  {
-    question: 'What kind of support do you offer?',
-    answer:
-      'We provide 24/7 technical support across phone, email, and WhatsApp, along with dedicated account managers for enterprise clients.',
+      'We offer flexible maintenance packages covering monitoring, security patches, performance tuning, and feature updates, backed by 24/7 technical support across phone, email, and WhatsApp, plus dedicated account managers for enterprise clients.',
   },
 ]
 

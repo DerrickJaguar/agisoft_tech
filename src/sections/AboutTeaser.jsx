@@ -36,7 +36,7 @@ export default function AboutTeaser() {
           <span className="font-heading text-sm font-semibold uppercase tracking-widest text-primary">
             About Agisoft Technologies
           </span>
-          <h2 className="mt-3 font-heading text-3xl font-bold text-charcoal sm:text-4xl">
+          <h2 className="mt-3 font-heading text-3xl font-bold text-charcoal dark:text-white sm:text-4xl">
             Engineering trust, one solution at a time
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-charcoal/60 dark:text-white/60">
@@ -62,13 +62,13 @@ export default function AboutTeaser() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="flex gap-5 rounded-2xl border border-charcoal/5 bg-surface p-6"
+              className="flex gap-5 rounded-2xl border border-charcoal/5 dark:border-white/10 bg-surface dark:bg-white/5 p-6"
             >
               <div className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary">
                 <pillar.icon size={22} />
               </div>
               <div>
-                <h3 className="font-heading text-lg font-semibold text-charcoal">
+                <h3 className="font-heading text-lg font-semibold text-charcoal dark:text-white">
                   {pillar.title}
                 </h3>
                 <p className="mt-1.5 text-sm leading-relaxed text-charcoal/60 dark:text-white/60">

@@ -1,5 +1,6 @@
 import PageHero from '../components/PageHero'
 import Services from '../sections/Services'
+import ServicesShowcase from '../sections/ServicesShowcase'
 import CTASection from '../components/CTASection'
 import useSEO from '../hooks/useSEO'
 
@@ -17,6 +18,7 @@ export default function ServicesPage() {
         title="Technology services built around your business"
         subtitle="Every engagement starts with your goals — then we bring the right mix of engineering, design, and strategy to deliver."
       />
+      <ServicesShowcase />
       <Services />
       <CTASection
         title="Not sure which service you need?"

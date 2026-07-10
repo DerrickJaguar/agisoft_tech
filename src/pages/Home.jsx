@@ -1,5 +1,6 @@
 import useSEO from '../hooks/useSEO'
 import Hero from '../sections/Hero'
+import MotionGallery from '../sections/MotionGallery'
 import AboutTeaser from '../sections/AboutTeaser'
 import Services from '../sections/Services'
 import FeaturedSolutions from '../sections/FeaturedSolutions'
@@ -22,6 +23,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <MotionGallery />
       <AboutTeaser />
       <Services />
       <FeaturedSolutions />

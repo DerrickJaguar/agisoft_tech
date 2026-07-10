@@ -41,7 +41,7 @@ export default function LiveChatWidget() {
 
               <div className="mt-4 flex flex-col gap-2">
                 <a
-                  href="https://wa.me/256785102010"
+                  href="https://wa.me/256785102501"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 rounded-xl border border-charcoal/10 px-3.5 py-2.5 text-sm font-medium text-charcoal transition-colors hover:border-primary/40 hover:bg-primary/5 dark:border-white/10 dark:text-white dark:hover:bg-primary/10"

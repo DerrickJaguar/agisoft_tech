@@ -6,12 +6,12 @@ import SectionHeading from '../components/SectionHeading'
 import { services } from '../data/siteData'
 
 const contactDetails = [
-  { icon: Phone, label: 'Phone', value: '+256 785 102 010', href: 'tel:+256785102010' },
+  { icon: Phone, label: 'Phone', value: '+256 785 102 501', href: 'tel:+256785102501' },
   {
     icon: MessageCircle,
     label: 'WhatsApp',
-    value: '+256 785 102 010',
-    href: 'https://wa.me/256785102010',
+    value: '+256 785 102 501',
+    href: 'https://wa.me/256785102501',
   },
   {
     icon: Mail,

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Mail, MapPin, Phone, CheckCircle2 } from 'lucide-react'
 import { FacebookIcon, LinkedinIcon, XIcon, InstagramIcon } from './SocialIcons'
+import { services, slugify } from '../data/siteData'
 
 const quickLinks = [
   { label: 'About Us', to: '/about' },
@@ -11,13 +12,18 @@ const quickLinks = [
   { label: 'Contact', to: '/contact' },
 ]
 
-const serviceLinks = [
-  { label: 'Custom Software Development', to: '/services' },
-  { label: 'Mobile App Development', to: '/services' },
-  { label: 'Cloud Computing', to: '/services' },
-  { label: 'Cybersecurity', to: '/services' },
-  { label: 'AI & Machine Learning', to: '/services' },
+const featuredServiceTitles = [
+  'Custom Software Development',
+  'Mobile App Development',
+  'Cloud Computing',
+  'Cybersecurity',
+  'Artificial Intelligence Solutions',
 ]
+
+const serviceLinks = featuredServiceTitles
+  .map((title) => services.find((s) => s.title === title))
+  .filter(Boolean)
+  .map((service) => ({ label: service.title, to: `/services/${slugify(service.title)}` }))
 
 const resourceLinks = [
   { label: 'Privacy Policy', to: '/privacy' },
@@ -113,8 +119,8 @@ export default function Footer() {
             </li>
             <li className="flex gap-3">
               <Phone size={18} className="mt-0.5 shrink-0 text-primary-light" />
-              <a href="tel:+256785102010" className="hover:text-primary-light">
-                +256 785 102 010
+              <a href="tel:+256785102501" className="hover:text-primary-light">
+                +256 785 102 501
               </a>
             </li>
             <li className="flex gap-3">
