@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, Calendar, Clock, ExternalLink } from 'lucide-react'
+import { ArrowRight, Calendar, Newspaper, ExternalLink } from 'lucide-react'
 import PageHero from '../components/PageHero'
 import useSEO from '../hooks/useSEO'
-import { blogPosts } from '../data/siteData'
+import blogPosts from '../data/blogFeed.json'
 
 export default function Blog() {
   useSEO({
@@ -54,8 +54,8 @@ export default function Blog() {
                     {post.date}
                   </span>
                   <span className="flex items-center gap-1.5">
-                    <Clock size={13} />
-                    {post.readTime}
+                    <Newspaper size={13} />
+                    {post.source}
                   </span>
                 </div>
                 <a
@@ -74,7 +74,8 @@ export default function Blog() {
 
         <p className="mt-10 flex items-center justify-center gap-1.5 text-center text-xs text-charcoal/40 dark:text-white/40">
           <ExternalLink size={13} />
-          These articles link out to trusted external resources on each topic.
+          Real, current articles from AWS, MIT Technology Review, Dark Reading, McKinsey, Google,
+          and Martin Fowler — refreshed automatically with every site update.
         </p>
       </section>
     </>

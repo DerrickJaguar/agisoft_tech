@@ -461,71 +461,9 @@ export const portfolioProjects = [
   },
 ]
 
-export const blogPosts = [
-  {
-    category: 'Artificial Intelligence',
-    title: 'How African Businesses Can Practically Adopt AI in 2026',
-    excerpt: 'Beyond the hype — a grounded look at where AI delivers real ROI for growing businesses today.',
-    date: 'June 2, 2026',
-    readTime: '6 min read',
-    link: 'https://www.ibm.com/topics/artificial-intelligence',
-    image: '/images/blog/ai.jpg',
-  },
-  {
-    category: 'Cybersecurity',
-    title: 'Five Cybersecurity Mistakes Growing Companies Make',
-    excerpt: 'The most common security gaps we see in fast-growing businesses, and how to close them.',
-    date: 'May 18, 2026',
-    readTime: '5 min read',
-    link: 'https://www.ibm.com/topics/cybersecurity',
-    image: '/images/blog/cybersecurity.jpg',
-  },
-  {
-    category: 'Cloud',
-    title: 'Choosing Between AWS, Azure, and Google Cloud',
-    excerpt: 'A practical framework for selecting the right cloud provider for your workload and budget.',
-    date: 'April 30, 2026',
-    readTime: '7 min read',
-    link: 'https://aws.amazon.com/what-is-cloud-computing/',
-    image: '/images/blog/cloud.jpg',
-  },
-  {
-    category: 'Software Engineering',
-    title: 'Why Scalable Architecture Matters From Day One',
-    excerpt: 'Technical debt is cheaper to avoid than to pay down. Here is how we design for scale early.',
-    date: 'April 9, 2026',
-    readTime: '6 min read',
-    link: 'https://martinfowler.com/architecture/',
-    image: '/images/blog/software.jpg',
-  },
-  {
-    category: 'Digital Transformation',
-    title: 'A Roadmap for Digitizing Legacy Government Systems',
-    excerpt: 'Lessons from modernizing paper-based processes for public sector institutions.',
-    date: 'March 22, 2026',
-    readTime: '8 min read',
-    link: 'https://www.ibm.com/topics/digital-transformation',
-    image: '/images/blog/digital-transformation.jpg',
-  },
-  {
-    category: 'Mobile Apps',
-    title: 'Native vs Cross-Platform: What We Recommend in 2026',
-    excerpt: 'Flutter, React Native, or native — how we decide based on your product and timeline.',
-    date: 'March 3, 2026',
-    readTime: '5 min read',
-    link: 'https://www.browserstack.com/guide/flutter-vs-react-native',
-    image: '/images/blog/mobile.jpg',
-  },
-  {
-    category: 'Innovation',
-    title: 'Building a Culture of Continuous Innovation',
-    excerpt: 'How our engineering teams stay ahead of the curve while still shipping reliably.',
-    date: 'February 14, 2026',
-    readTime: '4 min read',
-    link: 'https://hbr.org/topic/subject/innovation',
-    image: '/images/blog/innovation.jpg',
-  },
-]
+// Real blog articles are generated at build time (see scripts/generate-blog-feed.js)
+// into src/data/blogFeed.json, sourced live from AWS, MIT Technology Review, Dark
+// Reading, McKinsey, Google, and Martin Fowler.
 
 export const jobOpenings = [
   {
