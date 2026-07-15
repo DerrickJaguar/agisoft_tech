@@ -3,46 +3,127 @@
     "category": "Cybersecurity",
     "source": "Dark Reading",
     "image": "/images/blog/cybersecurity.jpg",
-    "title": "Jen Ellis: Connecting Cyber Community With Political Machinery",
-    "excerpt": "Security Pro File: On the heels of her recent honors as a Member of the Order of the British Empire (MBE), we take a look back at the events that shaped Jen Ellis' adv…",
-    "date": "July 10, 2026",
-    "link": "https://www.darkreading.com/cybersecurity-operations/jen-ellis-connecting-cyber-community-political-machinery"
+    "title": "Nigeria Deepens Cybersecurity Efforts as Cybercriminals See More Profits",
+    "excerpt": "The West African country advanced rules to force organizations to disclose cyberattacks, joining other nations in a shift to mandated transparency.",
+    "date": "July 15, 2026",
+    "link": "https://www.darkreading.com/cyber-risk/nigeria-cybersecurity-efforts-cybercriminals-profits"
   },
   {
     "category": "Cybersecurity",
     "source": "Dark Reading",
     "image": "/images/blog/cybersecurity.jpg",
-    "title": "Cybercriminals Flock to Healthcare Businesses as Attacks Surge",
-    "excerpt": "While cyberattacks against hospitals and clinics grew modestly in the first half of 2026, attacks on service providers and other healthcare businesses more than doubled.",
-    "date": "July 10, 2026",
-    "link": "https://www.darkreading.com/threat-intelligence/cybercriminals-healthcare-businesses-attacks-surge"
+    "title": "Records Are Made to Be Broken: Patch Tuesday Raises Triage Stakes",
+    "excerpt": "Three of the 622 CVEs for which Microsoft issued patches this week are zero-days; there are more than 60 critical vulnerabilities.",
+    "date": "July 15, 2026",
+    "link": "https://www.darkreading.com/vulnerabilities-threats/records-broken-patch-tuesday-raises-triage-stakes"
+  },
+  {
+    "category": "Digital Transformation",
+    "source": "McKinsey & Company",
+    "image": "/images/blog/digital-transformation.jpg",
+    "title": "The CEO’s role in transformation",
+    "excerpt": "Transformations often falter due to internal dynamics that divide organizations, such as misaligned incentives, siloed efforts, and risk aversion. CEOs are uniquely po…",
+    "date": "July 15, 2026",
+    "link": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/the-ceos-role-in-transformation"
   },
   {
     "category": "Cybersecurity",
     "source": "Dark Reading",
     "image": "/images/blog/cybersecurity.jpg",
-    "title": "Fresh ATM Crypto Software Bugs: Jackpot or Bust?",
-    "excerpt": "Organizations, and possibly ATMs, are at risk of compromise, thanks to holes in a Microsoft BitLocker security wrapper.",
-    "date": "July 10, 2026",
-    "link": "https://www.darkreading.com/vulnerabilities-threats/atm-crypto-software-bugs-jackpot-bust"
+    "title": "6 GHz Wi-Fi Flaws Could Disrupt Critical Systems",
+    "excerpt": "Automated Frequency Coordination systems by default trust client-side data, which could lead to location spoofing and other attacks that disrupt traffic.",
+    "date": "July 14, 2026",
+    "link": "https://www.darkreading.com/perimeter/6-ghz-wi-fi-flaws-disrupt-critical-systems"
+  },
+  {
+    "category": "Software Engineering",
+    "source": "Martin Fowler",
+    "image": "/images/blog/software.jpg",
+    "title": "DSLs Enable Reliable Use of LLMs",
+    "excerpt": "LLMs generate code incredibly fast, but to ensure they generate exactly what is intended, they need clear boundaries. Abstractions and Domain-Specific Languages (DSLs)…",
+    "date": "July 14, 2026",
+    "link": "https://martinfowler.com/articles/llm-and-dsls.html"
   },
   {
     "category": "Innovation",
     "source": "MIT Technology Review",
     "image": "/images/blog/innovation.jpg",
-    "title": "The Download: Claude’s inner workings and OpenAI’s “super app”",
-    "excerpt": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. Anthropic found a hidden spac…",
-    "date": "July 10, 2026",
-    "link": "https://www.technologyreview.com/2026/07/10/1140316/the-download-anthropic-claude-hidden-space-openai-super-app/"
+    "title": "The Download: Claude’s inner workings, and the future of world models",
+    "excerpt": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. What Anthropic’s latest AI di…",
+    "date": "July 14, 2026",
+    "link": "https://www.technologyreview.com/2026/07/14/1140391/the-download-anthropic-claude-internal-thoughts-world-models/"
+  },
+  {
+    "category": "Mobile Apps",
+    "source": "Android Developers Blog",
+    "image": "/images/blog/mobile.jpg",
+    "title": "Android Studio Quail 2 is Stable: Multi-task with the Android Studio AI agent",
+    "excerpt": "Posted by Amman Asfaw, Product Manager, Android Studio Android Studio Quail 2 is now stable and ready for you to use in production, bringing a shift to your IDE with c…",
+    "date": "July 14, 2026",
+    "link": "https://android-developers.googleblog.com/2026/06/android-studio-quail-2-stable-features.html"
   },
   {
     "category": "Innovation",
     "source": "MIT Technology Review",
     "image": "/images/blog/innovation.jpg",
-    "title": "Sperm donors need limits, says a European fertility group",
-    "excerpt": "Ties van der Meer doesn’t know how many siblings he has. The 47-year-old was conceived at a private fertility clinic in the Netherlands using sperm provided by an anon…",
-    "date": "July 10, 2026",
-    "link": "https://www.technologyreview.com/2026/07/10/1140289/sperm-donors-need-limits-says-a-european-fertility-group/"
+    "title": "PsiQuantum has a plan to make a massive quantum computer out of light",
+    "excerpt": "The machine that could change the world will be housed in a room that looks like a data center crossed with an ice cream factory. Inside will be some 100 stainless-ste…",
+    "date": "July 14, 2026",
+    "link": "https://www.technologyreview.com/2026/07/14/1140356/psiquantum-plan-massive-quantum-computer-out-of-light/"
+  },
+  {
+    "category": "Digital Transformation",
+    "source": "McKinsey & Company",
+    "image": "/images/blog/digital-transformation.jpg",
+    "title": "How consumers are reshaping the future of mobility",
+    "excerpt": "Our recent survey reveals shifting consumer priorities, with rising expectations for affordability, sustainability, and technology and greater openness to new brands a…",
+    "date": "July 14, 2026",
+    "link": "https://www.mckinsey.com/features/mckinsey-center-for-future-mobility/our-insights/how-consumers-are-reshaping-the-future-of-mobility"
+  },
+  {
+    "category": "Digital Transformation",
+    "source": "McKinsey & Company",
+    "image": "/images/blog/digital-transformation.jpg",
+    "title": "How physician CEOs hone the double-edged sword of clinical training",
+    "excerpt": "The journey from physician to CEO has no prescribed path, but those who’ve reached the top reveal how they evolved the strengths and instincts forged in clinical train…",
+    "date": "July 14, 2026",
+    "link": "https://www.mckinsey.com/industries/healthcare/our-insights/how-physician-ceos-hone-the-double-edged-sword-of-clinical-training"
+  },
+  {
+    "category": "Cloud",
+    "source": "AWS Blog",
+    "image": "/images/blog/cloud.jpg",
+    "title": "Amazon SQS turns 20: Two decades of reliable messaging at scale",
+    "excerpt": "On July 13, 2006, we launched Amazon Simple Queue Service (Amazon SQS) as one of the first three services available to customers, alongside Amazon EC2 and Amazon S3. W…",
+    "date": "July 13, 2026",
+    "link": "https://aws.amazon.com/blogs/aws/amazon-sqs-turns-20-two-decades-of-reliable-messaging-at-scale/"
+  },
+  {
+    "category": "Artificial Intelligence",
+    "source": "MIT Technology Review",
+    "image": "/images/blog/ai.jpg",
+    "title": "What Anthropic’s latest AI discovery does—and doesn’t—show",
+    "excerpt": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. Anthropic—currently the world…",
+    "date": "July 13, 2026",
+    "link": "https://www.technologyreview.com/2026/07/13/1140343/what-anthropics-latest-ai-discovery-does-and-doesnt-show/"
+  },
+  {
+    "category": "Cloud",
+    "source": "AWS Blog",
+    "image": "/images/blog/cloud.jpg",
+    "title": "AWS Weekly Roundup: AWS Builder Center at 1 year, Network Scanning in Security Hub, Loom for AWS, and more (July 13, 2026)",
+    "excerpt": "AWS Builder Center turned one year old last week. Launched on July 9, 2025, the platform has grown from a community hub with Wishlist voting, community profiles, and a…",
+    "date": "July 13, 2026",
+    "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-builder-center-at-one-year-network-scanning-in-security-hub-loom-for-aws-and-more-july-13-2026/"
+  },
+  {
+    "category": "Software Engineering",
+    "source": "Martin Fowler",
+    "image": "/images/blog/software.jpg",
+    "title": "Fragments: July 13",
+    "excerpt": "Some more of my notes from Thoughtworks Future of Software Development Retreat . When we had our first retreat in Utah early this year, nobody had heard of Harness Eng…",
+    "date": "July 13, 2026",
+    "link": "https://martinfowler.com/fragments/2026-07-13.html"
   },
   {
     "category": "Artificial Intelligence",
@@ -72,15 +153,6 @@
     "link": "https://martinfowler.com/articles/exploring-gen-ai/local-models-for-coding-experiences.html"
   },
   {
-    "category": "Software Engineering",
-    "source": "Martin Fowler",
-    "image": "/images/blog/software.jpg",
-    "title": "Viability of local models for coding",
-    "excerpt": "Birgitta Böckeler recently spent some time trying out running local LLMs for some programming tasks. In this memo she outlines the factors that influence how viable th…",
-    "date": "July 7, 2026",
-    "link": "https://martinfowler.com/articles/exploring-gen-ai/local-models-for-coding-factors.html"
-  },
-  {
     "category": "Artificial Intelligence",
     "source": "MIT Technology Review",
     "image": "/images/blog/ai.jpg",
@@ -88,15 +160,6 @@
     "excerpt": "With the rapid progress of AI capabilities and the move to agentic systems, organizations are expanding their use cases as the technology continues to grow. That const…",
     "date": "July 7, 2026",
     "link": "https://www.technologyreview.com/2026/07/07/1139413/the-foundational-elements-of-ai-architecture-that-it-leaders-need-to-scale/"
-  },
-  {
-    "category": "Artificial Intelligence",
-    "source": "MIT Technology Review",
-    "image": "/images/blog/ai.jpg",
-    "title": "Your family’s $300 stake in OpenAI",
-    "excerpt": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. OpenAI CEO Sam Altman’s oft-d…",
-    "date": "July 6, 2026",
-    "link": "https://www.technologyreview.com/2026/07/06/1140176/your-familys-300-stake-in-openai/"
   },
   {
     "category": "Cloud",
@@ -115,41 +178,5 @@
     "excerpt": "Posted by Steph Pio, Strategic Partnerships Manager, Google Play EMEA Sub-Saharan Africa is home to some of the world’s most creative storytelling. To help bring those…",
     "date": "July 6, 2026",
     "link": "https://android-developers.googleblog.com/2026/07/Indie-Games-Fund-Africa.html"
-  },
-  {
-    "category": "Software Engineering",
-    "source": "Martin Fowler",
-    "image": "/images/blog/software.jpg",
-    "title": "Fragments: July 6",
-    "excerpt": "Last week, Thoughtworks ran a second Future of Software Development Retreat , this time in Europe. As with the previous event, I’ll be sharing some fragmentary thought…",
-    "date": "July 6, 2026",
-    "link": "https://martinfowler.com/fragments/2026-07-06.html"
-  },
-  {
-    "category": "Cloud",
-    "source": "AWS Blog",
-    "image": "/images/blog/cloud.jpg",
-    "title": "Upgrade Amazon EKS clusters with confidence using Kubernetes version rollbacks",
-    "excerpt": "Learn how Kubernetes version rollbacks for Amazon EKS let you reverse cluster upgrades within seven days. This new feature provides a safety net for upgrade failures—n…",
-    "date": "July 1, 2026",
-    "link": "https://aws.amazon.com/blogs/aws/upgrade-amazon-eks-clusters-with-confidence-using-kubernetes-version-rollbacks/"
-  },
-  {
-    "category": "Cloud",
-    "source": "AWS Blog",
-    "image": "/images/blog/cloud.jpg",
-    "title": "Accelerate your infrastructure deployments by up to 4x with AWS CloudFormation Express mode",
-    "excerpt": "AWS CloudFormation speeds up infrastructure deployment with Express mode, enabling AI agents and developers to receive deployment confirmation in seconds and iterate f…",
-    "date": "July 1, 2026",
-    "link": "https://aws.amazon.com/blogs/aws/accelerate-your-infrastructure-deployments-by-up-to-4x-with-aws-cloudformation-express-mode/"
-  },
-  {
-    "category": "Mobile Apps",
-    "source": "Android Developers Blog",
-    "image": "/images/blog/mobile.jpg",
-    "title": "Eclipsa Video: HDR That Looks Right on Every Screen",
-    "excerpt": "Posted by Tibian Elsheikh, Product Manager, Android Core Graphics and Jeffrey Jose, Product Manager, Android Core Graphics We’ve all been there: You’re scrolling throu…",
-    "date": "June 29, 2026",
-    "link": "https://android-developers.googleblog.com/2026/06/eclipsa-video-hdr-review.html"
   }
 ]
